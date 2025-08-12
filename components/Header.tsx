@@ -8,8 +8,8 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-40 bg-dark-900 border-b-2 border-border/60">
-      <div className="container mx-auto px-4">
+    <header className="sticky top-0 z-40 bg-dark-900/80 backdrop-blur-sm border-b-2 border-border/60">
+      <div className="px-4">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo - Left side, always anchored to left edge */}
           {/* --- 2. This is the updated logo section --- */}
