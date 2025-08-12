@@ -10,8 +10,8 @@ export default function Header() {
     <header className="sticky top-0 z-40 bg-dark-900 border-b border-border/20">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16 md:h-20">
-          {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2 group">
+          {/* Logo - Left side, always anchored to left edge */}
+          <Link href="/" className="flex items-center space-x-2 group flex-shrink-0">
             <div className="w-8 h-8 bg-primary-500 rounded-lg flex items-center justify-center">
               <span className="text-white font-bold text-sm">LV</span>
             </div>
@@ -20,8 +20,9 @@ export default function Header() {
             </div>
           </Link>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
+          {/* Right side group: Navigation + CTA Button */}
+          <div className="hidden md:flex items-center space-x-8 flex-shrink-0">
+            {/* Navigation Links */}
             <Link 
               href="/services" 
               className="text-white hover:text-primary-400 font-medium transition-colors duration-300"
@@ -40,10 +41,8 @@ export default function Header() {
             >
               About
             </Link>
-          </nav>
-
-          {/* CTA Button */}
-          <div className="hidden md:block">
+            
+            {/* CTA Button */}
             <Link 
               href="/contact" 
               className="bg-primary-500 text-white px-6 py-3 rounded-full font-semibold hover:bg-primary-600 transition-colors duration-300"
@@ -55,7 +54,7 @@ export default function Header() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden p-2 rounded-lg hover:bg-dark-light transition-colors duration-300"
+            className="md:hidden p-2 rounded-lg hover:bg-dark-light transition-colors duration-300 flex-shrink-0"
             aria-label="Toggle menu"
           >
             <div className="w-6 h-6 flex flex-col justify-center items-center">

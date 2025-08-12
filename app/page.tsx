@@ -257,7 +257,7 @@ export default function HomePage() {
             <div className="text-center">
               <div className="text-2xl mb-2">📧</div>
               <h3 className="font-bold mb-2">Email Us</h3>
-              <p className="text-primary-400">info@landisventures.com</p>
+              <p className="text-primary-400">info@landis-ventures.com</p>
             </div>
             <div className="text-center">
               <div className="text-2xl mb-2">📞</div>
@@ -316,9 +316,8 @@ export default function HomePage() {
             <div>
               <h3 className="font-bold mb-4">Contact</h3>
               <ul className="space-y-2 text-text-secondary text-sm">
-                <li>info@landisventures.com</li>
+                <li>info@landis-ventures.com</li>
                 <li>(202) 854-0738</li>
-                <li>Financial District</li>
               </ul>
             </div>
           </div>
