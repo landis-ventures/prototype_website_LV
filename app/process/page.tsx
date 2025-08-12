@@ -1,29 +1,31 @@
+import { Briefcase, Bot, Code, Rocket, Wrench } from 'lucide-react';
+
 export default function ProcessPage() {
   const processSteps = [
     {
-      number: "1",
+      icon: <Briefcase size={28} />,
       title: "Discovery & Analysis",
-      description: "Understanding your goals and assessing ROI."
+      description: "We start by deeply understanding your business objectives, operational challenges, and defining key success metrics to ensure a tangible ROI."
     },
     {
-      number: "2",
+      icon: <Bot size={28} />,
       title: "Solution Design",
-      description: "Creating the blueprint for your automation."
+      description: "Our team designs a custom automation blueprint, mapping out workflows and system integrations tailored to your specific needs."
     },
     {
-      number: "3",
+      icon: <Code size={28} />,
       title: "Development & Testing",
-      description: "Building the bot and conducting rigorous UAT."
+      description: "We build your intelligent automation solution, followed by rigorous testing and User Acceptance Testing (UAT) to guarantee flawless performance."
     },
     {
-      number: "4",
+      icon: <Rocket size={28} />,
       title: "Deployment & Launch",
-      description: "Moving the solution to production with training."
+      description: "We handle the seamless transition to your live production environment, including comprehensive training for your team."
     },
     {
-      number: "5",
+      icon: <Wrench size={28} />,
       title: "Support & Maintenance",
-      description: "Ensuring long-term success and reliability."
+      description: "Our commitment doesn't end at launch. We provide ongoing support and maintenance to ensure long-term reliability and success."
     }
   ];
 
@@ -33,32 +35,40 @@ export default function ProcessPage() {
       <section className="py-24 md:py-32">
         <div className="container mx-auto px-4 text-center max-w-4xl">
           <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-            Our Structured 5-Phase Process
+            Our Proven Path to Success
           </h1>
           <p className="text-lg md:text-xl mb-8 text-text-secondary max-w-3xl mx-auto">
-            We ensure high-quality, sustainable results through a proven methodology that has delivered success for leading financial institutions.
+            We follow a structured 5-phase methodology to deliver high-quality, sustainable automation solutions that drive measurable growth for leading financial institutions.
           </p>
         </div>
       </section>
 
-      {/* Process Section */}
-      <section className="py-20 bg-dark-900">
-        <div className="container mx-auto px-4 max-w-6xl">
+      {/* Process Timeline Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-4 max-w-4xl">
           <div className="relative">
-            {/* Process Line */}
-            <div className="absolute top-8 left-0 right-0 h-0.5 bg-border hidden md:block"></div>
-            
-            <div className="grid md:grid-cols-5 gap-8">
-              {processSteps.map((step, index) => (
-                <div key={index} className="text-center relative">
-                  <div className="w-16 h-16 bg-primary-500 rounded-full flex items-center justify-center text-white font-bold text-xl mx-auto mb-4 process-step">
-                    {step.number}
+            {/* The vertical timeline bar */}
+            <div className="absolute left-1/2 top-0 h-full w-0.5 bg-border/40 -translate-x-1/2"></div>
+
+            {processSteps.map((step, index) => (
+              <div key={index} className={`relative mb-12 flex w-full items-center ${index % 2 === 0 ? 'justify-start' : 'justify-end'}`}>
+                {/* The card containing the content */}
+                <div className={`w-1/2 ${index % 2 === 0 ? 'pr-8' : 'pl-8'}`}>
+                  <div className="bg-dark-800 p-6 rounded-lg border border-border/20 shadow-lg">
+                    <div className="flex items-center gap-4 mb-3">
+                      <div className="w-12 h-12 bg-primary-500/10 border border-primary-500/30 rounded-full flex items-center justify-center text-primary-400">
+                        {step.icon}
+                      </div>
+                      <h3 className="text-xl font-bold">{step.title}</h3>
+                    </div>
+                    <p className="text-text-secondary">{step.description}</p>
                   </div>
-                  <h3 className="text-lg font-bold mb-2">{step.title}</h3>
-                  <p className="text-text-secondary text-sm">{step.description}</p>
                 </div>
-              ))}
-            </div>
+                
+                {/* The dot on the timeline */}
+                <div className="absolute left-1/2 top-1/2 w-4 h-4 bg-primary-500 rounded-full -translate-x-1/2 -translate-y-1/2 border-4 border-dark-900"></div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
