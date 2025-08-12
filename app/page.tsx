@@ -5,171 +5,148 @@ export default function HomePage() {
   const services = [
     {
       title: "Robotic Process Automation (RPA)",
-      description: "Automating repetitive, rule-based tasks within desktop applications, web portals, and legacy systems to improve efficiency and reduce human error.",
-      icon: "🤖",
-      features: ["Process Mapping", "Workflow Design", "Integration Support"]
+      description: "Automating repetitive, rule-based tasks within your existing desktop applications, web portals, and legacy systems."
     },
     {
       title: "Intelligent Document Processing (IDP)",
-      description: "Using AI and OCR to automatically capture, extract, and validate data from documents like invoices, forms, and financial statements.",
-      icon: "📄",
-      features: ["AI-Powered Extraction", "Multi-Format Support", "Validation Rules"]
+      description: "Using AI and OCR to automatically capture, extract, and validate data from invoices, forms, and financial statements."
     },
     {
       title: "Data Processing & Reconciliation",
-      description: "Building robust automations to aggregate data from multiple sources, perform complex reconciliation, and generate actionable reports for audit and compliance.",
-      icon: "📊",
-      features: ["Multi-Source Integration", "Real-time Processing", "Compliance Reporting"]
+      description: "Building robust automations to aggregate data, perform complex reconciliation, and generate actionable reports."
     },
     {
       title: "End-to-End Workflow Automation",
-      description: "Designing holistic solutions that connect disparate systems and create seamless, autonomous business processes.",
-      icon: "🔄",
-      features: ["System Integration", "Process Orchestration", "Performance Monitoring"]
+      description: "Designing holistic solutions that connect disparate systems and create seamless, autonomous business processes."
     },
   ];
 
-  const values = [
+  const processSteps = [
     {
-      title: "Integrity & Trust",
-      description: "The foundation of our client relationships is built on unwavering honesty and transparency in every action.",
-      icon: "🤝"
+      number: "1",
+      title: "Discovery & Analysis",
+      description: "Understanding your goals and assessing ROI."
     },
     {
-      title: "Value-Driven Precision",
-      description: "We deliver solutions that provide clear, measurable business value, meticulously built for reliability and impact.",
-      icon: "🎯"
+      number: "2",
+      title: "Solution Design",
+      description: "Creating the blueprint for your automation."
     },
     {
-      title: "Strategic Partnership",
-      description: "We work as an extension of your team, understanding your goals to ensure our solutions drive long-term success.",
-      icon: "🚀"
+      number: "3",
+      title: "Development & Testing",
+      description: "Building the bot and conducting rigorous UAT."
+    },
+    {
+      number: "4",
+      title: "Deployment & Launch",
+      description: "Moving the solution to production with training."
+    },
+    {
+      number: "5",
+      title: "Support & Maintenance",
+      description: "Ensuring long-term success and reliability."
     }
   ];
 
-  const stats = [
-    { number: "95%", label: "Process Efficiency Gain" },
-    { number: "60%", label: "Cost Reduction" },
-    { number: "24/7", label: "Automation Uptime" },
-    { number: "100%", label: "Client Satisfaction" }
+  const values = [
+    "Integrity & Trust",
+    "Value-Driven Precision",
+    "Strategic Partnership",
+    "Rapid Innovation",
+    "Relentless Improvement"
   ];
 
   return (
-    <main className="min-h-screen bg-neutral-50 text-secondary-500">
+    <main className="min-h-screen bg-dark-900 text-white">
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-primary-600 via-primary-700 to-primary-800 text-white">
-        {/* Background Pattern */}
-        <div className="absolute inset-0 opacity-20">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(255,255,255,0.15)_1px,transparent_0)] bg-[length:20px_20px]"></div>
+      <section className="relative py-24 md:py-32">
+        <div className="container mx-auto px-4 text-center max-w-4xl">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+            Intelligent Automation for Financial Services
+          </h1>
+          <p className="text-lg md:text-xl mb-8 text-text-secondary max-w-3xl mx-auto">
+            We unlock new levels of profitability and efficiency by designing and implementing intelligent automation solutions that streamline your operations and drive measurable growth.
+          </p>
+          <Link 
+            href="/contact" 
+            className="inline-block bg-primary-500 text-white font-bold text-lg py-4 px-8 rounded-full hover:bg-primary-600 transition-colors duration-300 shadow-medium"
+          >
+            Schedule Your Free Consultation
+          </Link>
         </div>
-        
-        <div className="relative container mx-auto px-4 py-24 md:py-32 text-center max-w-6xl">
-          <div className="animate-fade-in">
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-              Intelligent Automation for
-              <span className="block text-accent-400">Financial Services</span>
-            </h1>
-            <p className="text-lg md:text-xl lg:text-2xl mb-8 font-light max-w-4xl mx-auto opacity-90">
-              We unlock new levels of profitability and efficiency by designing and implementing intelligent automation solutions that streamline your operations and drive measurable growth.
+      </section>
+
+      {/* Services Section */}
+      <section id="services" className="py-20 bg-dark-900">
+        <div className="container mx-auto px-4 max-w-6xl">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Services</h2>
+            <p className="text-lg text-text-secondary max-w-2xl mx-auto">
+              We solve complex operational challenges with a focused suite of automation services.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Link 
-                href="/contact" 
-                className="group bg-white text-primary-600 font-bold text-lg py-4 px-8 rounded-full shadow-soft hover:shadow-medium transition-all duration-300 hover:scale-105"
+          </div>
+          
+          <div className="grid md:grid-cols-2 gap-8">
+            {services.map((service, index) => (
+              <div 
+                key={index} 
+                className="bg-content-box-900 p-8 rounded-xl border border-border/20 hover:border-primary-500/30 transition-all duration-300"
               >
-                Schedule Your Free Consultation
-                <span className="ml-2 group-hover:translate-x-1 transition-transform duration-300">→</span>
-              </Link>
-              <Link 
-                href="/services" 
-                className="group border-2 border-white/30 text-white font-semibold text-lg py-4 px-8 rounded-full hover:bg-white/10 transition-all duration-300 backdrop-blur-sm"
-              >
-                Explore Our Services
-              </Link>
+                <h3 className="text-xl font-bold mb-4 text-white">{service.title}</h3>
+                <p className="text-text-secondary leading-relaxed">{service.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Process Section */}
+      <section className="py-20 bg-dark-900">
+        <div className="container mx-auto px-4 max-w-6xl">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Structured 5-Phase Process</h2>
+            <p className="text-lg text-text-secondary max-w-2xl mx-auto">
+              We ensure high-quality, sustainable results through a proven methodology.
+            </p>
+          </div>
+          
+          <div className="relative">
+            {/* Process Line */}
+            <div className="absolute top-8 left-0 right-0 h-0.5 bg-border hidden md:block"></div>
+            
+            <div className="grid md:grid-cols-5 gap-8">
+              {processSteps.map((step, index) => (
+                <div key={index} className="text-center relative">
+                  <div className="w-16 h-16 bg-primary-500 rounded-full flex items-center justify-center text-white font-bold text-xl mx-auto mb-4 process-step">
+                    {step.number}
+                  </div>
+                  <h3 className="text-lg font-bold mb-2">{step.title}</h3>
+                  <p className="text-text-secondary text-sm">{step.description}</p>
+                </div>
+              ))}
             </div>
           </div>
         </div>
       </section>
 
-      {/* Stats Section */}
-      <section className="py-16 bg-white border-b border-neutral-200">
-        <div className="container mx-auto px-4 max-w-6xl">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center animate-slide-up" style={{ animationDelay: `${index * 0.1}s` }}>
-                <div className="text-3xl md:text-4xl font-bold text-primary-600 mb-2">{stat.number}</div>
-                <div className="text-sm md:text-base text-neutral-600 font-medium">{stat.label}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Services Section */}
-      <section id="services" className="py-20 bg-neutral-50">
-        <div className="container mx-auto px-4 max-w-7xl">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold mb-6 text-secondary-500">
-              Our <span className="text-primary-600">Services</span>
-            </h2>
-            <p className="text-lg text-neutral-600 max-w-3xl mx-auto">
-              Comprehensive automation solutions designed to transform your financial operations and drive measurable business outcomes.
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
-            {services.map((service, index) => (
-              <div 
-                key={index} 
-                className="group bg-white p-8 rounded-2xl shadow-soft hover:shadow-large transition-all duration-500 card-hover border border-neutral-200/50"
-              >
-                <div className="flex items-start gap-4 mb-6">
-                  <div className="text-4xl">{service.icon}</div>
-                  <div className="flex-1">
-                    <h3 className="text-xl font-bold mb-3 text-secondary-500 group-hover:text-primary-600 transition-colors duration-300">
-                      {service.title}
-                    </h3>
-                    <p className="text-neutral-600 leading-relaxed mb-4">{service.description}</p>
-                  </div>
-                </div>
-                
-                <div className="space-y-2">
-                  {service.features.map((feature, featureIndex) => (
-                    <div key={featureIndex} className="flex items-center gap-2 text-sm text-neutral-500">
-                      <div className="w-1.5 h-1.5 bg-accent-500 rounded-full"></div>
-                      {feature}
-                    </div>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-      
       {/* Values Section */}
-      <section id="values" className="py-20 bg-white">
+      <section className="py-20 bg-dark-900">
         <div className="container mx-auto px-4 max-w-6xl">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold mb-6 text-secondary-500">
-              Our Core <span className="text-primary-600">Values</span>
-            </h2>
-            <p className="text-lg text-neutral-600 max-w-3xl mx-auto">
-              The principles that guide every decision, every solution, and every client relationship.
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Core Values</h2>
+            <p className="text-lg text-text-secondary max-w-2xl mx-auto">
+              The principles that guide every decision we make.
             </p>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-5 gap-6">
             {values.map((value, index) => (
               <div 
                 key={index} 
-                className="text-center p-8 rounded-2xl bg-gradient-to-br from-neutral-50 to-white border border-neutral-200/50 hover:border-primary-200 transition-all duration-300 group"
+                className="bg-content-box-900 p-6 rounded-xl text-center border border-border/20 hover:border-primary-500/30 transition-all duration-300"
               >
-                <div className="text-5xl mb-4 group-hover:scale-110 transition-transform duration-300">{value.icon}</div>
-                <h3 className="text-xl font-bold mb-4 text-secondary-500 group-hover:text-primary-600 transition-colors duration-300">
-                  {value.title}
-                </h3>
-                <p className="text-neutral-600 leading-relaxed">{value.description}</p>
+                <h3 className="font-bold text-lg">{value}</h3>
               </div>
             ))}
           </div>
@@ -177,30 +154,191 @@ export default function HomePage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-primary-700 to-primary-800 text-white">
-        <div className="container mx-auto px-4 text-center max-w-4xl">
+      <section className="py-20 bg-dark-900">
+        <div className="container mx-auto px-4 max-w-4xl text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Ready to Transform Your Operations?
+            Ready to Automate Your Success?
           </h2>
-          <p className="text-lg mb-8 opacity-90">
-            Join the leading financial institutions that have already achieved remarkable efficiency gains with our automation solutions.
+          <p className="text-lg mb-12 text-text-secondary max-w-3xl mx-auto">
+            Let's discuss how we can solve your most pressing operational challenges and unlock new opportunities for growth. The first step is a complimentary consultation.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              href="/contact" 
-              className="bg-accent-500 text-white font-bold text-lg py-4 px-8 rounded-full hover:bg-accent-600 transition-colors duration-300 shadow-medium hover:shadow-large"
+          
+          {/* Contact Form */}
+          <div className="bg-content-box-900 p-8 rounded-2xl border border-border/20 max-w-2xl mx-auto">
+            <form 
+              action="https://formspree.io/f/xldlznep"
+              method="POST"
+              className="space-y-6"
             >
-              Get Started Today
-            </Link>
-            <Link 
-              href="/case-studies" 
-              className="border-2 border-white/30 text-white font-semibold text-lg py-4 px-8 rounded-full hover:bg-white/10 transition-all duration-300"
-            >
-              View Case Studies
-            </Link>
+              <div className="grid md:grid-cols-2 gap-4">
+                <div>
+                  <label className="block text-sm font-medium mb-2 text-left">First Name *</label>
+                  <input 
+                    type="text" 
+                    name="firstName"
+                    placeholder="Enter your first name"
+                    className="w-full px-4 py-3 bg-dark-800 border border-border rounded-lg text-white placeholder-text-muted focus:border-primary-500 focus:outline-none transition-colors"
+                    required
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm font-medium mb-2 text-left">Last Name *</label>
+                  <input 
+                    type="text" 
+                    name="lastName"
+                    placeholder="Enter your last name"
+                    className="w-full px-4 py-3 bg-dark-800 border border-border rounded-lg text-white placeholder-text-muted focus:border-primary-500 focus:outline-none transition-colors"
+                    required
+                  />
+                </div>
+              </div>
+              
+              <div className="grid md:grid-cols-2 gap-4">
+                <div>
+                  <label className="block text-sm font-medium mb-2 text-left">Email Address *</label>
+                  <input 
+                    type="email" 
+                    name="email"
+                    placeholder="your.email@company.com"
+                    className="w-full px-4 py-3 bg-dark-800 border border-border rounded-lg text-white placeholder-text-muted focus:border-primary-500 focus:outline-none transition-colors"
+                    required
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm font-medium mb-2 text-left">Phone Number</label>
+                  <input 
+                    type="tel" 
+                    name="phone"
+                    placeholder="(555) 123-4567"
+                    className="w-full px-4 py-3 bg-dark-800 border border-border rounded-lg text-white placeholder-text-muted focus:border-primary-500 focus:outline-none transition-colors"
+                  />
+                </div>
+              </div>
+              
+              <div>
+                <label className="block text-sm font-medium mb-2 text-left">Company *</label>
+                <input 
+                  type="text" 
+                  name="company"
+                  placeholder="Your company name"
+                  className="w-full px-4 py-3 bg-dark-800 border border-border rounded-lg text-white placeholder-text-muted focus:border-primary-500 focus:outline-none transition-colors"
+                  required
+                />
+              </div>
+              
+              <div>
+                <label className="block text-sm font-medium mb-2 text-left">Project Details</label>
+                <textarea 
+                  name="message"
+                  placeholder="Tell us about your current challenges and automation goals..."
+                  rows={4}
+                  className="w-full px-4 py-3 bg-dark-800 border border-border rounded-lg text-white placeholder-text-muted focus:border-primary-500 focus:outline-none transition-colors resize-none"
+                ></textarea>
+              </div>
+              
+              <div className="flex items-start gap-3">
+                <input type="checkbox" id="communications" name="communications" className="mt-1" />
+                <label htmlFor="communications" className="text-sm text-text-secondary">
+                  I agree to receive communications from Landis Ventures regarding my consultation request. *
+                </label>
+              </div>
+              
+              <button 
+                type="submit"
+                className="w-full bg-primary-500 text-white font-bold py-4 px-8 rounded-full hover:bg-primary-600 transition-colors duration-300"
+              >
+                Schedule Free Consultation
+              </button>
+            </form>
+          </div>
+          
+          {/* Contact Info */}
+          <div className="grid md:grid-cols-3 gap-8 mt-16">
+            <div className="text-center">
+              <div className="text-2xl mb-2">📧</div>
+              <h3 className="font-bold mb-2">Email Us</h3>
+              <p className="text-primary-400">info@landisventures.com</p>
+            </div>
+            <div className="text-center">
+              <div className="text-2xl mb-2">📞</div>
+              <h3 className="font-bold mb-2">Call Us</h3>
+              <p className="text-primary-400">(202) 854-0738</p>
+            </div>
+            <div className="text-center">
+              <div className="text-2xl mb-2">⏱️</div>
+              <h3 className="font-bold mb-2">Response Time</h3>
+              <p className="text-primary-400">Within 24 hours</p>
+            </div>
           </div>
         </div>
       </section>
+
+      {/* Footer */}
+      <footer className="bg-dark-900 border-t border-border/20">
+        <div className="container mx-auto px-4 py-16">
+          <div className="grid md:grid-cols-4 gap-8 mb-8">
+            {/* Company Info */}
+            <div>
+              <div className="flex items-center gap-2 mb-4">
+                <div className="w-8 h-8 bg-primary-500 rounded-lg flex items-center justify-center">
+                  <span className="text-white font-bold text-sm">LV</span>
+                </div>
+                <span className="font-bold text-xl">Landis Ventures</span>
+              </div>
+              <p className="text-text-secondary text-sm leading-relaxed">
+                Intelligent automation solutions for financial services. Transforming operations through cutting-edge technology.
+              </p>
+            </div>
+            
+            {/* Company Links */}
+            <div>
+              <h3 className="font-bold mb-4">Company</h3>
+              <ul className="space-y-2 text-text-secondary text-sm">
+                <li><Link href="/about" className="hover:text-primary-400 transition-colors">About Us</Link></li>
+                <li><Link href="/services" className="hover:text-primary-400 transition-colors">Services</Link></li>
+                <li><Link href="/process" className="hover:text-primary-400 transition-colors">Our Process</Link></li>
+                <li><Link href="/contact" className="hover:text-primary-400 transition-colors">Contact</Link></li>
+              </ul>
+            </div>
+            
+            {/* Services Links */}
+            <div>
+              <h3 className="font-bold mb-4">Services</h3>
+              <ul className="space-y-2 text-text-secondary text-sm">
+                <li><Link href="/rpa" className="hover:text-primary-400 transition-colors">RPA Solutions</Link></li>
+                <li><Link href="/document-processing" className="hover:text-primary-400 transition-colors">Document Processing</Link></li>
+                <li><Link href="/data-reconciliation" className="hover:text-primary-400 transition-colors">Data Reconciliation</Link></li>
+                <li><Link href="/workflow-automation" className="hover:text-primary-400 transition-colors">Workflow Automation</Link></li>
+              </ul>
+            </div>
+            
+            {/* Contact Info */}
+            <div>
+              <h3 className="font-bold mb-4">Contact</h3>
+              <ul className="space-y-2 text-text-secondary text-sm">
+                <li>info@landisventures.com</li>
+                <li>(202) 854-0738</li>
+                <li>Financial District</li>
+              </ul>
+            </div>
+          </div>
+          
+          {/* Bottom Footer */}
+          <div className="border-t border-border/20 pt-8 flex flex-col md:flex-row justify-between items-center">
+            <p className="text-text-muted text-sm">
+              © 2025 Landis Ventures. All rights reserved.
+            </p>
+            <div className="flex gap-6 mt-4 md:mt-0">
+              <Link href="/privacy" className="text-text-muted text-sm hover:text-primary-400 transition-colors">
+                Privacy Policy
+              </Link>
+              <Link href="/terms" className="text-text-muted text-sm hover:text-primary-400 transition-colors">
+                Terms of Service
+              </Link>
+            </div>
+          </div>
+        </div>
+      </footer>
 
       {/* Chatbot Integration */}
       <div className="fixed bottom-6 right-6 z-50">

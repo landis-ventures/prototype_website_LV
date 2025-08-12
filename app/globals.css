@@ -3,31 +3,47 @@
 @tailwind utilities;
 
 :root {
-  --foreground: #212121; /* Charcoal gray for text */
-  --background: #f8f9fa; /* Light gray for backgrounds */
+  --foreground: #ffffff; /* White text */
+  --background: #0a0a0a; /* Very dark background */
   
   /* Core Brand Colors */
-  --color-primary: #004d99; /* Deep Professional Blue */
-  --color-secondary: #0a0a0a; /* Almost Black */
-  --color-neutral-light: #f3f4f6; /* Very light gray */
-  --color-neutral-white: #ffffff; /* Pure white */
-  --color-accent: #00c853; /* Vibrant Teal */
+  --color-primary: #2563eb; /* Vibrant blue for buttons and accents */
+  --color-primary-light: #3b82f6; /* Lighter blue for hover states */
+  --color-primary-dark: #1d4ed8; /* Darker blue for active states */
+  --color-dark: #0a0a0a; /* Main dark background */
+  --color-dark-light: #1c1c1c; /* Lighter dark for cards */
+  --color-dark-lighter: #2a2a2a; /* Even lighter dark for subtle elements */
+  --color-accent: #60a5fa; /* Light blue for highlights */
+  
+  /* Extended Color Palette */
+  --color-text-primary: #ffffff; /* White for headings */
+  --color-text-secondary: #e5e7eb; /* Light gray for body text */
+  --color-text-muted: #9ca3af; /* Muted gray for secondary text */
+  --color-border: #374151; /* Subtle borders */
+  --color-border-light: #4b5563; /* Lighter borders */
   
   /* Custom chat variables for n8n */
-  --chat--color-primary: #004d99;
+  --chat--color-primary: #2563eb;
   --chat--border-radius: 0.75rem;
-  --chat--message--bot--background: #f3f4f6;
+  --chat--message--bot--background: #1c1c1c;
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
   :root {
-    --foreground: #ededed;
-    --background: #0a0a0a;
-    --color-primary: #4fc3f7; /* Lighter blue for dark mode */
-    --color-secondary: #ffffff;
-    --color-neutral-light: #1c1c1c;
-    --color-neutral-white: #0a0a0a;
-    --color-accent: #64ffda;
+    --foreground: #0a0a0a;
+    --background: #ffffff;
+    --color-primary: #2563eb;
+    --color-primary-light: #3b82f6;
+    --color-primary-dark: #1d4ed8;
+    --color-dark: #ffffff;
+    --color-dark-light: #f9fafb;
+    --color-dark-lighter: #f3f4f6;
+    --color-accent: #60a5fa;
+    --color-text-primary: #0a0a0a;
+    --color-text-secondary: #374151;
+    --color-text-muted: #6b7280;
+    --color-border: #e5e7eb;
+    --color-border-light: #d1d5db;
   }
 }
 
@@ -40,7 +56,7 @@ body {
 
 /* Custom styling for n8n chat to make corners more rounded */
 .n8n-chat {
-  border-radius: 1rem !important; /* Very rounded corners */
+  border-radius: 1rem !important;
 }
 
 .n8n-chat .chat-container {
@@ -65,9 +81,9 @@ body {
 
 /* Custom component styles */
 .glass-effect {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(37, 99, 235, 0.1);
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(37, 99, 235, 0.2);
 }
 
 .card-hover {
@@ -76,7 +92,7 @@ body {
 
 .card-hover:hover {
   transform: translateY(-4px);
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 20px 25px -5px rgba(37, 99, 235, 0.2), 0 10px 10px -5px rgba(37, 99, 235, 0.1);
 }
 
 .gradient-text {
@@ -84,4 +100,28 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+}
+
+.header-gradient {
+  background: var(--color-dark);
+}
+
+.process-step {
+  transition: all 0.3s ease;
+}
+
+.process-step:hover {
+  transform: scale(1.05);
+}
+
+.form-input {
+  background: var(--color-dark-light);
+  border: 1px solid var(--color-border);
+  color: var(--color-text-primary);
+}
+
+.form-input:focus {
+  border-color: var(--color-primary);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
 }

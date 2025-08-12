@@ -1,51 +1,95 @@
 export default function ContactPage() {
     return (
-      <main className="container p-4">
-        <h1 className="text-2xl font-bold mb-4">Contact Us</h1>
-        <form
-          action="https://formspree.io/f/xldlznep" // <-- MAKE SURE YOUR URL IS HERE
-          method="POST"
-          className="flex flex-col gap-4 max-w-md"
-        >
-          <label htmlFor="name">Full Name:</label>
-          <input
-            id="name"
-            type="text"
-            name="name"
-            className="p-2 border rounded"
-            required
-          />
-  
-          <label htmlFor="email">Email:</label>
-          <input
-            id="email"
-            type="email"
-            name="email"
-            className="p-2 border rounded"
-            required
-          />
-  
-          <label htmlFor="phone">Phone Number: (Optional)</label>
-          <input
-            id="phone"
-            type="tel"
-            name="phone"
-            className="p-2 border rounded"
-          />
-  
-          <label htmlFor="message">Project Details:</label>
-          <textarea
-            id="message"
-            name="message"
-            rows={5}
-            className="p-2 border rounded"
-            required
-          ></textarea>
-  
-          <button type="submit" className="bg-blue-600 text-white p-2 rounded hover:bg-blue-700 w-full">
-            Send Message
-          </button>
-        </form>
+      <main className="min-h-screen bg-dark-900 text-white">
+        <div className="container mx-auto px-4 py-20">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-16">
+              <h1 className="text-4xl md:text-5xl font-bold mb-6">Contact Us</h1>
+              <p className="text-lg text-text-secondary max-w-2xl mx-auto">
+                Ready to transform your operations? Let's discuss how we can help you achieve new levels of efficiency and profitability.
+              </p>
+            </div>
+            
+            <div className="bg-content-box-900 p-8 rounded-2xl border border-border/20">
+              <form
+                action="https://formspree.io/f/xldlznep"
+                method="POST"
+                className="space-y-6"
+              >
+                <div className="grid md:grid-cols-2 gap-4">
+                  <div>
+                    <label htmlFor="name" className="block text-sm font-medium mb-2">Full Name *</label>
+                    <input
+                      id="name"
+                      type="text"
+                      name="name"
+                      className="w-full px-4 py-3 bg-dark-800 border border-border rounded-lg text-white placeholder-text-muted focus:border-primary-500 focus:outline-none transition-colors"
+                      placeholder="Enter your full name"
+                      required
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="email" className="block text-sm font-medium mb-2">Email *</label>
+                    <input
+                      id="email"
+                      type="email"
+                      name="email"
+                      className="w-full px-4 py-3 bg-dark-800 border border-border rounded-lg text-white placeholder-text-muted focus:border-primary-500 focus:outline-none transition-colors"
+                      placeholder="your.email@company.com"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <div>
+                  <label htmlFor="phone" className="block text-sm font-medium mb-2">Phone Number (Optional)</label>
+                  <input
+                    id="phone"
+                    type="tel"
+                    name="phone"
+                    className="w-full px-4 py-3 bg-dark-800 border border-border rounded-lg text-white placeholder-text-muted focus:border-primary-500 focus:outline-none transition-colors"
+                    placeholder="(555) 123-4567"
+                  />
+                </div>
+
+                <div>
+                  <label htmlFor="message" className="block text-sm font-medium mb-2">Project Details *</label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows={5}
+                    className="w-full px-4 py-3 bg-dark-800 border border-border rounded-lg text-white placeholder-text-muted focus:border-primary-500 focus:outline-none transition-colors resize-none"
+                    placeholder="Tell us about your current challenges and automation goals..."
+                    required
+                  ></textarea>
+                </div>
+
+                <button type="submit" className="w-full bg-primary-500 text-white font-bold py-4 px-8 rounded-full hover:bg-primary-600 transition-colors duration-300">
+                  Send Message
+                </button>
+              </form>
+            </div>
+            
+            {/* Contact Info */}
+            <div className="grid md:grid-cols-3 gap-8 mt-16">
+              <div className="text-center">
+                <div className="text-2xl mb-2">📧</div>
+                <h3 className="font-bold mb-2">Email Us</h3>
+                <p className="text-primary-400">info@landisventures.com</p>
+              </div>
+              <div className="text-center">
+                <div className="text-2xl mb-2">📞</div>
+                <h3 className="font-bold mb-2">Call Us</h3>
+                <p className="text-primary-400">(202) 854-0738</p>
+              </div>
+              <div className="text-center">
+                <div className="text-2xl mb-2">⏱️</div>
+                <h3 className="font-bold mb-2">Response Time</h3>
+                <p className="text-primary-400">Within 24 hours</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </main>
     );
   }
