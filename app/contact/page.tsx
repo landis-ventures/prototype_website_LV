@@ -64,7 +64,7 @@ export default function ContactPage() {
                   ></textarea>
                 </div>
 
-                <button type="submit" className="w-full bg-primary-500 text-white font-bold py-4 px-8 rounded-full hover:bg-primary-600 transition-colors duration-300">
+                <button type="submit" className="w-full bg-gradient-to-r from-primary-500 to-primary-400 text-white font-bold py-4 px-8 rounded-full shadow-lg hover:shadow-xl hover:-translate-y-1 hover:scale-105 transition-all duration-300">
                   Send Message
                 </button>
               </form>

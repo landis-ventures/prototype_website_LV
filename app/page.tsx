@@ -68,12 +68,20 @@ export default function HomePage() {
           <p className="text-lg md:text-xl mb-8 text-text-secondary max-w-3xl mx-auto">
             We unlock new levels of profitability and efficiency by designing and implementing intelligent automation solutions that streamline your operations and drive measurable growth.
           </p>
-          <Link 
-            href="/contact" 
-            className="inline-block bg-primary-500 text-white font-bold text-lg py-4 px-8 rounded-full hover:bg-primary-600 transition-colors duration-300 shadow-medium"
-          >
-            Schedule Your Free Consultation
-          </Link>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <Link 
+              href="/contact" 
+              className="inline-block bg-gradient-to-r from-primary-500 to-primary-400 text-white font-bold text-lg py-4 px-8 rounded-full shadow-lg hover:shadow-xl hover:-translate-y-1 hover:scale-105 transition-all duration-300"
+            >
+              Schedule Your Free Consultation
+            </Link>
+            <Link 
+              href="/services" 
+              className="inline-block border-2 border-accent-400/40 text-white font-semibold text-lg py-4 px-8 rounded-full bg-gradient-to-r from-accent-400/10 to-accent-400/20 hover:from-accent-400/20 hover:to-accent-400/30 backdrop-blur-sm shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+            >
+              Explore Our Services
+            </Link>
+          </div>
         </div>
       </section>
 
@@ -87,14 +95,14 @@ export default function HomePage() {
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
             {services.map((service, index) => (
-              <div 
-                key={index} 
-                className="bg-content-box-900 p-8 rounded-xl border border-border/20 hover:border-primary-500/30 transition-all duration-300"
+              <div
+                key={index}
+                className="bg-gradient-to-br from-content-box-900 to-primary-900/20 p-6 rounded-xl border border-primary-500/20 hover:border-primary-500/40 hover:bg-gradient-to-br hover:from-content-box-900 hover:to-primary-800/30 hover:-translate-y-2 hover:shadow-xl transition-all duration-300 cursor-pointer"
               >
-                <h3 className="text-xl font-bold mb-4 text-white">{service.title}</h3>
-                <p className="text-text-secondary leading-relaxed">{service.description}</p>
+                <h3 className="text-lg font-bold mb-3 text-white">{service.title}</h3>
+                <p className="text-text-secondary leading-relaxed text-sm">{service.description}</p>
               </div>
             ))}
           </div>
@@ -140,13 +148,13 @@ export default function HomePage() {
             </p>
           </div>
           
-          <div className="grid md:grid-cols-5 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
             {values.map((value, index) => (
-              <div 
-                key={index} 
-                className="bg-content-box-900 p-6 rounded-xl text-center border border-border/20 hover:border-primary-500/30 transition-all duration-300 flex items-center justify-center min-h-[120px]"
+              <div
+                key={index}
+                className="bg-gradient-to-br from-content-box-900 to-primary-900/20 p-6 rounded-xl border border-primary-500/20 hover:border-primary-500/40 hover:bg-gradient-to-br hover:from-content-box-900 hover:to-primary-800/30 hover:-translate-y-2 hover:shadow-xl transition-all duration-300 flex items-center justify-center min-h-[120px] text-center cursor-pointer"
               >
-                <h3 className="font-bold text-lg">{value}</h3>
+                <h3 className="text-lg font-bold text-white">{value}</h3>
               </div>
             ))}
           </div>
@@ -239,7 +247,7 @@ export default function HomePage() {
               
               <button 
                 type="submit"
-                className="w-full bg-primary-500 text-white font-bold py-4 px-8 rounded-full hover:bg-primary-600 transition-colors duration-300"
+                className="w-full bg-gradient-to-r from-primary-500 to-primary-400 text-white font-bold py-4 px-8 rounded-full shadow-lg hover:shadow-xl hover:-translate-y-1 hover:scale-105 transition-all duration-300"
               >
                 Schedule Free Consultation
               </button>
@@ -274,8 +282,12 @@ export default function HomePage() {
             {/* Company Info */}
             <div>
               <div className="flex items-center gap-2 mb-4">
-                <div className="w-8 h-8 bg-primary-500 rounded-lg flex items-center justify-center">
-                  <span className="text-white font-bold text-sm">LV</span>
+                <div className="w-8 h-8 rounded-lg flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="lucide lucide-layers w-8 h-8 text-blue-500">
+                <path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"></path>
+                <path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"></path>
+                <path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"></path>
+                </svg>
                 </div>
                 <span className="font-bold text-xl">Landis Ventures</span>
               </div>

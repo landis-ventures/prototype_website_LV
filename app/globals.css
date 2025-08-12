@@ -48,10 +48,28 @@
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  line-height: 1.6;
+  background-color: #0a0a0a; /* Your dark background color */
+  position: relative; /* Required for the overlay */
+  overflow-x: hidden; /* Prevents horizontal scrollbar */
+}
+
+/* This creates the noise effect on top of your background */
+body::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800"><g fill="none" stroke="%23333" stroke-width="1"><path d="M-500 75c0 0 125-30 250-30S0 75 0 75s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30" opacity=".2"/><path d="M-500 225c0 0 125-30 250-30S0 225 0 225s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30" opacity=".2"/><path d="M-500 375c0 0 125-30 250-30S0 375 0 375s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30" opacity=".2"/><path d="M-500 525c0 0 125-30 250-30S0 525 0 525s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30" opacity=".2"/><path d="M-500 675c0 0 125-30 250-30S0 675 0 675s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30" opacity=".2"/><path d="M-500 825c0 0 125-30 250-30S0 825 0 825s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30" opacity=".2"/></g></svg>');
+  opacity: 0.1;
+  pointer-events: none; /* Allows you to click through it */
+  z-index: -1;
+}
+
+/* Add this to change the "behind the website" color */
+html {
+  background-color: #0a0a0a; /* Example: a dark gray */
 }
 
 /* Custom styling for n8n chat to make corners more rounded */
