@@ -52,9 +52,9 @@ export default function Header() {
             {/* CTA Button */}
             <Link 
               href="/contact" 
-              className="bg-gradient-to-r from-primary-500 to-primary-400 text-white px-6 py-3 rounded-full font-semibold shadow-lg hover:shadow-xl hover:-translate-y-1 hover:scale-105 transition-all duration-300"
+              className="bg-gradient-to-r from-primary-700 to-primary-500 text-white px-6 py-3 rounded-full font-semibold shadow-lg hover:shadow-xl hover:-translate-y-1 hover:scale-105 transition-all duration-300"
             >
-              Get a Quote
+              Get Started
             </Link>
           </div>
 
@@ -99,10 +99,10 @@ export default function Header() {
             <div className="pt-4">
               <Link 
                 href="/contact" 
-                className="block w-full bg-gradient-to-r from-accent-500 to-accent-400 text-dark-600 font-bold px-6 py-3 rounded-full text-center shadow-lg hover:shadow-xl hover:-translate-y-1 hover:scale-105 transition-all duration-300"
+                className="block w-full bg-gradient-to-r from-accent-700 to-accent-500 text-dark-600 font-bold px-6 py-3 rounded-full text-center shadow-lg hover:shadow-xl hover:-translate-y-1 hover:scale-105 transition-all duration-300"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Get a Quote
+                Get Started
               </Link>
             </div>
           </nav>

@@ -71,7 +71,7 @@ export default function HomePage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Link 
               href="/contact" 
-              className="inline-block bg-gradient-to-r from-primary-500 to-primary-400 text-white font-bold text-lg py-4 px-8 rounded-full shadow-lg hover:shadow-xl hover:-translate-y-1 hover:scale-105 transition-all duration-300"
+              className="inline-block bg-gradient-to-r from-primary-700 to-primary-500 text-white font-bold text-lg py-4 px-8 rounded-full shadow-lg hover:shadow-xl hover:-translate-y-1 hover:scale-105 transition-all duration-300"
             >
               Schedule Your Free Consultation
             </Link>
@@ -247,7 +247,7 @@ export default function HomePage() {
               
               <button 
                 type="submit"
-                className="w-full bg-gradient-to-r from-primary-500 to-primary-400 text-white font-bold py-4 px-8 rounded-full shadow-lg hover:shadow-xl hover:-translate-y-1 hover:scale-105 transition-all duration-300"
+                className="w-full bg-gradient-to-r from-primary-700 to-primary-500 text-white font-bold py-4 px-8 rounded-full shadow-lg hover:shadow-xl hover:-translate-y-1 hover:scale-105 transition-all duration-300"
               >
                 Schedule Free Consultation
               </button>
