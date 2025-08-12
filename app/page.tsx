@@ -144,7 +144,7 @@ export default function HomePage() {
             {values.map((value, index) => (
               <div 
                 key={index} 
-                className="bg-content-box-900 p-6 rounded-xl text-center border border-border/20 hover:border-primary-500/30 transition-all duration-300"
+                className="bg-content-box-900 p-6 rounded-xl text-center border border-border/20 hover:border-primary-500/30 transition-all duration-300 flex items-center justify-center min-h-[120px]"
               >
                 <h3 className="font-bold text-lg">{value}</h3>
               </div>
@@ -236,12 +236,6 @@ export default function HomePage() {
                 ></textarea>
               </div>
               
-              <div className="flex items-start gap-3">
-                <input type="checkbox" id="communications" name="communications" className="mt-1" />
-                <label htmlFor="communications" className="text-sm text-text-secondary">
-                  I agree to receive communications from Landis Ventures regarding my consultation request. *
-                </label>
-              </div>
               
               <button 
                 type="submit"
