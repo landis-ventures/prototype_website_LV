@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
-
+import N8nChat from "@/components/N8nChat"; // <-- Step 1: Import
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -31,6 +31,7 @@ export default function RootLayout({
       >
         <Header />
         {children}
+        <N8nChat /> {/* <-- Step 2: Add Component Here */}
       </body>
     </html>
   );
