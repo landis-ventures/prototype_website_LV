@@ -2,25 +2,13 @@ import N8nChat from '../components/N8nChat';
 import Link from 'next/link';
 
 export default function HomePage() {
-  const services = [
-    {
-      title: "Robotic Process Automation (RPA)",
-      description: "Automating repetitive, rule-based tasks within your existing desktop applications, web portals, and legacy systems."
-    },
-    {
-      title: "Intelligent Document Processing (IDP)",
-      description: "Using AI and OCR to automatically capture, extract, and validate data from invoices, forms, and financial statements."
-    },
-    {
-      title: "Data Processing & Reconciliation",
-      description: "Building robust automations to aggregate data, perform complex reconciliation, and generate actionable reports."
-    },
-    {
-      title: "End-to-End Workflow Automation",
-      description: "Designing holistic solutions that connect disparate systems and create seamless, autonomous business processes."
-    },
+  const values = [
+    "Integrity & Trust",
+    "Value-Driven Precision",
+    "Strategic Partnership",
+    "Rapid Innovation",
+    "Relentless Improvement"
   ];
-
   const processSteps = [
     {
       number: "1",
@@ -48,42 +36,100 @@ export default function HomePage() {
       description: "Ensuring long-term success and reliability."
     }
   ];
-
-  const values = [
-    "Integrity & Trust",
-    "Value-Driven Precision",
-    "Strategic Partnership",
-    "Rapid Innovation",
-    "Relentless Improvement"
+  const services = [
+    {
+      title: "Robotic Process Automation (RPA)",
+      description: "Automating repetitive, rule-based tasks within your existing desktop applications, web portals, and legacy systems."
+    },
+    {
+      title: "Intelligent Document Processing (IDP)",
+      description: "Using AI and OCR to automatically capture, extract, and validate data from invoices, forms, and financial statements."
+    },
+    {
+      title: "Data Processing & Reconciliation",
+      description: "Building robust automations to aggregate data, perform complex reconciliation, and generate actionable reports."
+    },
+    {
+      title: "End-to-End Workflow Automation",
+      description: "Designing holistic solutions that connect disparate systems and create seamless, autonomous business processes."
+    },
   ];
 
-  return (
-    <main className="min-h-screen bg-dark-900 text-white">
-      {/* Hero Section */}
-      <section className="relative py-24 md:py-32">
-        <div className="container mx-auto px-4 text-center max-w-4xl">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-            Intelligent Automation for Financial Services
-          </h1>
-          <p className="text-lg md:text-xl mb-8 text-text-secondary max-w-3xl mx-auto">
-            We unlock new levels of profitability and efficiency by designing and implementing intelligent automation solutions that streamline your operations and drive measurable growth.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Link 
-              href="/contact" 
-              className="inline-block bg-gradient-to-r from-primary-700 to-primary-500 text-white font-bold text-lg py-4 px-8 rounded-full shadow-lg hover:shadow-xl hover:-translate-y-1 hover:scale-105 transition-all duration-300"
-            >
-              Schedule Your Free Consultation
-            </Link>
-            <Link 
-              href="/services" 
-              className="inline-block border-2 border-accent-400/40 text-white font-semibold text-lg py-4 px-8 rounded-full bg-gradient-to-r from-accent-400/10 to-accent-400/20 hover:from-accent-400/20 hover:to-accent-400/30 backdrop-blur-sm shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
-            >
-              Explore Our Services
-            </Link>
+      {/* 5-Phase Process Section - Modern UI */}
+      <section className="py-20 w-full bg-gradient-to-br from-primary-900 via-dark-900 to-primary-700 relative overflow-hidden">
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="w-full h-full bg-gradient-to-r from-primary-900/30 via-primary-500/10 to-primary-700/30 blur-2xl opacity-40"></div>
+        </div>
+        <div className="max-w-7xl mx-auto px-4 relative z-10">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl md:text-5xl font-extrabold mb-4 text-white drop-shadow-xl">Our Structured 5-Phase Process</h2>
+            <p className="text-lg text-text-secondary max-w-2xl mx-auto">We ensure high-quality, sustainable results through a proven methodology.</p>
+          </div>
+          <div className="relative flex flex-col md:flex-row items-end justify-between gap-10 md:gap-0">
+            {/* Animated Timeline Line */}
+            <div className="hidden md:block absolute top-[110px] left-0 right-0 h-1 bg-gradient-to-r from-primary-500 via-primary-400 to-primary-700 animate-pulse z-0"></div>
+            {/* Steps */}
+            <div className="w-full flex flex-col md:flex-row items-stretch justify-between gap-10 md:gap-0">
+              {processSteps.map((step, idx) => (
+                <div key={step.number} className="relative z-10 flex-1 flex flex-col items-center text-center group min-h-[260px]">
+                  <div className="w-20 h-20 md:w-24 md:h-24 bg-white/10 backdrop-blur-xl rounded-full flex items-center justify-center text-primary-100 font-extrabold text-2xl md:text-3xl mb-2 shadow-2xl border-4 border-primary-400 group-hover:scale-110 group-hover:border-primary-300 transition-all duration-300" style={{marginBottom: '0.5rem'}}>
+                    <span className="bg-gradient-to-br from-primary-400 via-primary-600 to-primary-900 bg-clip-text text-transparent drop-shadow-lg animate-pulse">{step.number}</span>
+                  </div>
+                  <div className="flex flex-col items-center justify-center flex-1" style={{marginTop: '0.5rem'}}>
+                    <h3 className="text-xl md:text-2xl font-bold mb-1 text-white drop-shadow-lg group-hover:text-primary-300 transition-colors duration-300">{step.title}</h3>
+                    <p className="text-text-secondary text-base md:text-lg max-w-xs mx-auto group-hover:text-white/80 transition-colors duration-300">{step.description}</p>
+                  </div>
+                  {/* Decorative Glow */}
+                  <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 w-24 h-6 bg-primary-500/30 blur-md opacity-60"></div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
+
+  return (
+    <main className="min-h-screen bg-dark-900 text-white">
+  {/* Main Call to Action Section */}
+  <section className="relative py-24 md:py-32 overflow-hidden" style={{background: 'radial-gradient(ellipse at center, #232a3a 0%, #111217 100%)'}}>
+    <div className="container mx-auto px-4 text-center max-w-4xl relative z-10">
+      <h1 className="text-4xl md:text-6xl font-black mb-6 leading-tight text-white drop-shadow-[0_2px_16px_rgba(0,123,255,0.25)]">
+        WASTING YOUR <span className="text-primary-400">TIME?</span>
+      </h1>
+      <p className="text-lg md:text-xl mb-8 text-text-secondary max-w-3xl mx-auto">
+        Optimize your business through intelligent automation to save time, increase <span className="text-primary-400 font-bold">profits</span>, and achieve your goals.
+      </p>
+      <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+        <Link 
+          href="/contact" 
+          className="inline-block bg-gradient-to-r from-primary-700 to-primary-500 text-white font-bold text-lg py-4 px-8 rounded-full shadow-lg hover:shadow-2xl hover:-translate-y-1 hover:scale-110 hover:bg-gradient-to-r hover:from-primary-600 hover:to-primary-400 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-primary-400/40"
+        >
+          Start Streamlining Processes Today
+        </Link>
+      </div>
+      {/* Optional: Decorative Glow/Shape */}
+      <div className="absolute inset-0 pointer-events-none z-0">
+        <div className="w-full h-full bg-gradient-radial from-primary-900/10 to-transparent opacity-60"></div>
+      </div>
+    </div>
+  </section>
+
+  <section className="py-20                                                    w-full">
+    <div className="w-full">
+  <div className="bg-gradient-to-br from-dark-800 via-dark-900 to-primary-900 border border-primary-700/30 rounded-3xl p-6 md:p-10 text-center shadow-2xl mx-0 w-full flex flex-col items-center justify-center">
+        <div className="w-20 h-20 bg-primary-500/10 border border-primary-500/30 rounded-full flex items-center justify-center text-primary-400 mb-8">
+          {/* Shield Icon for trust */}
+          <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <h2 className="text-4xl md:text-5xl font-extrabold mb-6 text-white tracking-tight drop-shadow-lg">
+          Your Satisfaction, Guaranteed.
+        </h2>
+        <p className="text-xl md:text-2xl text-text-secondary max-w-2xl mx-auto mb-2 font-medium">
+          We are so confident in our ability to deliver transformative results that we offer a <span className="font-extrabold text-primary-400">100% money-back guarantee</span>. If you are not completely satisfied with the outcome of our work, you won't pay a dime. It's our commitment to a true, value-driven partnership.
+        </p>
+      </div>
+    </div>
+  </section>
 
       {/* Services Section */}
       <section id="services" className="py-20 bg-dark-900">
@@ -283,7 +329,7 @@ export default function HomePage() {
             <div>
               <div className="flex items-center gap-2 mb-4">
                 <div className="w-8 h-8 rounded-lg flex items-center justify-center">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="lucide lucide-layers w-8 h-8 text-blue-500">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-layers w-8 h-8 text-blue-500">
                 <path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"></path>
                 <path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"></path>
                 <path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"></path>

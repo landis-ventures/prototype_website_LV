@@ -17,15 +17,15 @@ export default function Header() {
             {/* SVG Icon */}
             <svg 
               xmlns="http://www.w3.org/2000/svg" 
-              width="24" 
-              height="24" 
+              width="40" 
+              height="40" 
               viewBox="0 0 24 24" 
               fill="none" 
               stroke="currentColor" 
               strokeWidth="2" 
               strokeLinecap="round" 
               strokeLinejoin="round" 
-              className="lucide lucide-layers w-8 h-8 text-blue-500"
+              className="lucide lucide-layers w-12 h-12 text-blue-500"
             >
                 <path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"></path>
                 <path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"></path>
