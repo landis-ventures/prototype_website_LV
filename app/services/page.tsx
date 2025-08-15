@@ -134,20 +134,20 @@ export default function ServicesPage() {
   ];
 
   return (
-    <main className="min-h-screen bg-dark-950 text-white">
+  <main className="min-h-screen bg-gradient-to-b from-gray-100 via-white to-gray-100 text-gray-900">
       {/* Hero Section - Modernized */}
-      <section className="relative py-32 md:py-44 bg-gradient-to-br from-primary-400 via-primary-600 to-dark-800 flex flex-col items-center justify-center text-center overflow-hidden">
+  <section className="relative py-32 md:py-44 bg-gradient-to-b from-white via-gray-100 to-gray-200 flex flex-col items-center justify-center text-center overflow-hidden">
         {/* Brighter abstract shapes for modern look */}
         <div className="absolute -top-32 -left-32 w-[600px] h-[600px] bg-primary-300/30 rounded-full blur-3xl pointer-events-none select-none" />
         <div className="absolute -bottom-32 -right-32 w-[500px] h-[500px] bg-primary-200/40 rounded-full blur-2xl pointer-events-none select-none" />
         <div className="relative z-10 max-w-4xl mx-auto px-4">
-          <h1 className="text-5xl md:text-6xl font-extrabold mb-6 text-white drop-shadow-xl tracking-tight" style={{textShadow: '0 2px 16px rgba(0,0,0,0.18)'}}>Intelligent Automation for Financial Services</h1>
-          <p className="text-lg md:text-xl font-semibold text-white mb-8" style={{textShadow: '0 1px 8px rgba(0,0,0,0.12)'}}>
+          <h1 className="text-5xl md:text-6xl font-extrabold mb-6 text-gray-900 drop-shadow-xl tracking-tight" style={{textShadow: '0 2px 16px rgba(0,0,0,0.10)'}}>Intelligent Automation for Financial Services</h1>
+          <p className="text-lg md:text-xl font-semibold text-gray-800 mb-8" style={{textShadow: '0 1px 8px rgba(0,0,0,0.08)'}}>
             Transform your operations, eliminate manual bottlenecks, and unlock new efficiencies. Reduce costs, enhance accuracy, and deliver superior customer experiences.
           </p>
           <Link 
             href="/contact" 
-            className="inline-block bg-white text-primary-700 font-bold text-lg py-4 px-10 rounded-full shadow-lg hover:bg-primary-100 hover:text-primary-800 hover:shadow-xl hover:-translate-y-1 hover:scale-105 transition-all duration-300 border border-primary-200"
+            className="inline-block bg-gray-900 text-white font-bold text-lg py-4 px-10 rounded-full shadow-lg hover:bg-gray-800 hover:text-primary-200 hover:shadow-xl hover:-translate-y-1 hover:scale-105 transition-all duration-300 border border-gray-800"
           >
             Schedule Your Free Consultation
           </Link>
@@ -155,20 +155,20 @@ export default function ServicesPage() {
       </section>
 
       {/* Service Formats - Creative Display */}
-      <section className="py-20 w-full bg-gradient-to-br from-dark-900 via-dark-800 to-primary-900">
+  <section className="py-20 w-full bg-gradient-to-b from-gray-100 via-white to-gray-100">
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-extrabold mb-6 text-white drop-shadow-lg">How We Deliver Value</h2>
-            <p className="text-lg text-text-secondary max-w-2xl mx-auto">Choose the format that fits your business—mix and match for maximum impact.</p>
+            <h2 className="text-4xl md:text-5xl font-extrabold mb-6 text-gray-900 drop-shadow-lg">How We Deliver Value</h2>
+            <p className="text-lg text-gray-700 max-w-2xl mx-auto">Choose the format that fits your business—mix and match for maximum impact.</p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
             {formats.map((format, idx) => (
-              <div key={idx} className="bg-gradient-to-br from-primary-900/10 to-dark-800 border border-primary-700/30 rounded-2xl p-10 flex flex-col items-center text-center shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 cursor-pointer group">
+              <div key={idx} className="bg-gradient-to-br from-gray-900 to-gray-700 border border-primary-700/30 rounded-2xl p-10 flex flex-col items-center text-center shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 cursor-pointer group">
                 <div className="w-16 h-16 rounded-full bg-gradient-to-br from-primary-700/30 to-primary-400/10 shadow-lg flex items-center justify-center mb-4 group-hover:scale-105 group-hover:shadow-2xl transition-all duration-300 backdrop-blur-md">
                   {format.icon}
                 </div>
-                <h3 className="text-xl md:text-2xl font-bold mb-3 text-white group-hover:text-primary-400 transition-colors duration-300">{format.title}</h3>
-                <p className="text-text-secondary text-base">{format.desc}</p>
+                <h3 className="text-xl md:text-2xl font-bold mb-3 text-blue-100 group-hover:text-primary-400 transition-colors duration-300">{format.title}</h3>
+                <p className="text-gray-100 text-base">{format.desc}</p>
               </div>
             ))}
           </div>
@@ -176,18 +176,18 @@ export default function ServicesPage() {
       </section>
 
   {/* Toolkit Section - Modern Cards */}
-      <section className="py-24 w-full bg-gradient-to-br from-dark-900 via-dark-950 to-primary-900">
+  <section className="py-24 w-full bg-gradient-to-b from-gray-200 via-white to-gray-100">
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
             {solutions.map((solution, idx) => (
-              <div key={idx} className="bg-gradient-to-br from-primary-900/10 to-dark-800 border border-primary-700/30 rounded-3xl p-10 flex flex-col items-center text-center shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 cursor-pointer group">
-                <h2 className="text-2xl md:text-3xl font-bold mb-4 text-white group-hover:text-primary-400 transition-colors duration-300">{solution.title}</h2>
-                <p className="text-primary-400 font-semibold mb-6">{solution.impact}</p>
+              <div key={idx} className="bg-gradient-to-br from-gray-900 to-gray-700 border border-primary-700/30 rounded-3xl p-10 flex flex-col items-center text-center shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 cursor-pointer group">
+                <h2 className="text-2xl md:text-3xl font-bold mb-4 text-blue-100 group-hover:text-primary-400 transition-colors duration-300">{solution.title}</h2>
+                <p className="text-primary-300 font-semibold mb-6">{solution.impact}</p>
                 <ul className="space-y-6 w-full">
                   {solution.items.map((item, i) => (
-                    <li key={i} className="bg-dark-900/80 rounded-xl p-5 border border-primary-700/10 shadow hover:shadow-xl transition-all duration-300 text-left">
-                      <h3 className="text-lg font-bold mb-2 text-white">{item.name}</h3>
-                      <p className="text-text-secondary leading-relaxed text-base">{item.desc}</p>
+                    <li key={i} className="bg-gray-800/90 rounded-xl p-5 border border-primary-700/10 shadow hover:shadow-xl transition-all duration-300 text-left">
+                      <h3 className="text-lg font-bold mb-2 text-blue-100">{item.name}</h3>
+                      <p className="text-gray-100 leading-relaxed text-base">{item.desc}</p>
                     </li>
                   ))}
                 </ul>
@@ -198,31 +198,31 @@ export default function ServicesPage() {
       </section>
 
       {/* Toolkit Section */}
-      <section className="py-20 w-full bg-gradient-to-br from-dark-950 via-dark-900 to-primary-900">
+  <section className="py-20 w-full bg-gradient-to-b from-gray-100 via-white to-gray-100">
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-extrabold mb-6 text-white drop-shadow-lg">Our Automation Toolkit</h2>
-            <p className="text-lg text-text-secondary max-w-2xl mx-auto">We leverage best-in-class tools and platforms to deliver robust, scalable automation solutions.</p>
+            <h2 className="text-4xl md:text-5xl font-extrabold mb-6 text-gray-900 drop-shadow-lg">Our Automation Toolkit</h2>
+            <p className="text-lg text-gray-700 max-w-2xl mx-auto">We leverage best-in-class tools and platforms to deliver robust, scalable automation solutions.</p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
             {toolkit.map((tool, idx) => (
-              <div key={idx} className="bg-gradient-to-br from-primary-900/10 to-dark-800 border border-primary-700/30 rounded-2xl p-8 flex flex-col items-center text-center shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 cursor-pointer group">
+              <div key={idx} className="bg-gradient-to-br from-gray-900 to-gray-700 border border-primary-700/30 rounded-2xl p-8 flex flex-col items-center text-center shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 cursor-pointer group">
                 <div className="w-14 h-14 rounded-full bg-gradient-to-br from-primary-700/30 to-primary-400/10 shadow-lg flex items-center justify-center mb-4 group-hover:scale-105 group-hover:shadow-2xl transition-all duration-300 backdrop-blur-md">
                   {tool.icon}
                 </div>
-                <h3 className="text-lg md:text-xl font-bold mb-2 text-white group-hover:text-primary-400 transition-colors duration-300">{tool.name}</h3>
-                <p className="text-text-secondary text-base">{tool.desc}</p>
+                <h3 className="text-lg md:text-xl font-bold mb-2 text-blue-100 group-hover:text-primary-400 transition-colors duration-300">{tool.name}</h3>
+                <p className="text-gray-100 text-base">{tool.desc}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
-      <section className="py-20 bg-dark-900">
+  <section className="py-20 bg-gradient-to-b from-white via-gray-100 to-gray-200">
         <div className="container mx-auto px-4 max-w-4xl text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             Ready to Build a More Efficient, Resilient, and Profitable Institution?
           </h2>
-          <p className="text-lg mb-12 text-text-secondary max-w-3xl mx-auto">
+          <p className="text-lg mb-12 text-gray-700 max-w-3xl mx-auto">
             Let's design your automation roadmap today. Contact Landis Automation for a complimentary strategy session and see how intelligent automation can transform your business.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -237,9 +237,9 @@ export default function ServicesPage() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-dark-900 border-t border-border/20">
+  <footer className="bg-gradient-to-b from-gray-200 via-white to-gray-100 border-t border-border/20">
         <div className="container mx-auto px-4 py-16">
-          <div className="grid md:grid-cols-4 gap-8 mb-8">
+          <div className="grid md:grid-cols-4 gap-8 mb-8 text-gray-900">
             {/* Company Info */}
             <div>
               <div className="flex items-center gap-2 mb-4">
@@ -252,14 +252,14 @@ export default function ServicesPage() {
                 </div>
                 <span className="font-bold text-xl">Landis Automation</span>
               </div>
-              <p className="text-text-secondary text-sm leading-relaxed">
+              <p className="text-gray-700 text-sm leading-relaxed">
                 Automation solutions for financial services. Transforming operations through AI, RPA, and digital innovation.
               </p>
             </div>
             {/* Company Links */}
             <div>
-              <h3 className="font-bold mb-4">Company</h3>
-              <ul className="space-y-2 text-text-secondary text-sm">
+              <h3 className="font-bold mb-4 text-gray-900">Company</h3>
+              <ul className="space-y-2 text-gray-700 text-sm">
                 <li><Link href="/about" className="hover:text-primary-400 transition-colors">About Us</Link></li>
                 <li><Link href="/services" className="hover:text-primary-400 transition-colors">Services</Link></li>
                 <li><Link href="/process" className="hover:text-primary-400 transition-colors">Our Process</Link></li>
@@ -268,8 +268,8 @@ export default function ServicesPage() {
             </div>
             {/* Services Links */}
             <div>
-              <h3 className="font-bold mb-4">Services</h3>
-              <ul className="space-y-2 text-text-secondary text-sm">
+              <h3 className="font-bold mb-4 text-gray-900">Services</h3>
+              <ul className="space-y-2 text-gray-700 text-sm">
                 <li><Link href="/rpa" className="hover:text-primary-400 transition-colors">RPA Solutions</Link></li>
                 <li><Link href="/document-processing" className="hover:text-primary-400 transition-colors">Document Processing</Link></li>
                 <li><Link href="/data-reconciliation" className="hover:text-primary-400 transition-colors">Data Reconciliation</Link></li>
@@ -278,8 +278,8 @@ export default function ServicesPage() {
             </div>
             {/* Contact Info */}
             <div>
-              <h3 className="font-bold mb-4">Contact</h3>
-              <ul className="space-y-2 text-text-secondary text-sm">
+              <h3 className="font-bold mb-4 text-gray-900">Contact</h3>
+              <ul className="space-y-2 text-gray-700 text-sm">
                 <li>info@landis-ventures.com</li>
                 <li>(202) 854-0738</li>
               </ul>
@@ -287,14 +287,14 @@ export default function ServicesPage() {
           </div>
           {/* Bottom Footer */}
           <div className="border-t border-border/20 pt-8 flex flex-col md:flex-row justify-between items-center">
-            <p className="text-text-muted text-sm">
+            <p className="text-gray-700 text-sm">
               © 2025 Landis Automation. All rights reserved.
             </p>
             <div className="flex gap-6 mt-4 md:mt-0">
-              <Link href="/privacy" className="text-text-muted text-sm hover:text-primary-400 transition-colors">
+              <Link href="/privacy" className="text-gray-700 text-sm hover:text-primary-400 transition-colors">
                 Privacy Policy
               </Link>
-              <Link href="/terms" className="text-text-muted text-sm hover:text-primary-400 transition-colors">
+              <Link href="/terms" className="text-gray-700 text-sm hover:text-primary-400 transition-colors">
                 Terms of Service
               </Link>
             </div>

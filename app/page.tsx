@@ -142,7 +142,7 @@ export default function HomePage() {
               href="/contact" 
               className="inline-block bg-gradient-to-r from-primary-700 to-primary-500 text-white font-bold text-xl py-5 px-12 rounded-full shadow-2xl hover:shadow-2xl hover:-translate-y-1 hover:scale-110 hover:bg-gradient-to-r hover:from-primary-600 hover:to-primary-400 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-primary-400/40"
             >
-              Start Streamlining Processes Today
+              Start Automating Today
             </Link>
           </div>
           {/* Optional: Decorative Glow/Shape */}
@@ -210,7 +210,7 @@ export default function HomePage() {
               {processSteps.map((step, idx) => (
                 <div key={step.number} className="relative z-10 flex-1 flex flex-col items-center text-center group min-h-[260px]">
                   <div className="w-20 h-20 md:w-24 md:h-24 bg-white/10 backdrop-blur-xl rounded-full flex items-center justify-center text-primary-100 font-extrabold text-2xl md:text-3xl mb-2 shadow-2xl border-4 border-primary-400 group-hover:scale-110 group-hover:border-primary-300 transition-all duration-300" style={{marginBottom: '0.5rem'}}>
-                    <span className="bg-gradient-to-br from-primary-400 via-primary-600 to-primary-900 bg-clip-text text-transparent drop-shadow-lg animate-pulse">{step.number}</span>
+                    <span className="bg-gradient-to-br from-primary-200 via-primary-300 to-primary-400 bg-clip-text text-transparent drop-shadow-lg animate-pulse">{step.number}</span>
                   </div>
                   <div className="flex flex-col items-center justify-center flex-1" style={{marginTop: '0.5rem'}}>
                     <h3 className="text-xl md:text-2xl font-bold mb-1 text-white drop-shadow-lg group-hover:text-primary-300 transition-colors duration-300">{step.title}</h3>
