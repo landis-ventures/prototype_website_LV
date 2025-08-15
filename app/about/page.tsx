@@ -1,113 +1,130 @@
+
 import Link from 'next/link';
 import N8nChat from '../../components/N8nChat';
+import { FaHandshake, FaCogs, FaChartLine, FaUserFriends, FaRocket, FaCheckCircle } from 'react-icons/fa';
+
 
 export default function AboutPage() {
   const values = [
-    "Integrity & Trust",
-    "Value-Driven Precision",
-    "Strategic Partnership",
-    "Rapid Innovation",
-    "Relentless Improvement"
+    {
+      icon: <FaHandshake className="text-primary-400 text-3xl mb-2 mx-auto" />,
+      title: "Integrity & Trust",
+      desc: "The unwavering foundation of our client relationships."
+    },
+    {
+      icon: <FaCheckCircle className="text-primary-400 text-3xl mb-2 mx-auto" />,
+      title: "Value-Driven Precision",
+      desc: "Clear, measurable business value, meticulously built for reliability and impact."
+    },
+    {
+      icon: <FaUserFriends className="text-primary-400 text-3xl mb-2 mx-auto" />,
+      title: "Strategic Partnership",
+      desc: "We work as an extension of your team for long-term success."
+    },
+    {
+      icon: <FaRocket className="text-primary-400 text-3xl mb-2 mx-auto" />,
+      title: "Rapid Innovation",
+      desc: "Dedicated to responsible, secure, and forward-thinking technology."
+    },
+    {
+      icon: <FaChartLine className="text-primary-400 text-3xl mb-2 mx-auto" />,
+      title: "Relentless Improvement",
+      desc: "Continuous growth for both our clients and ourselves."
+    },
   ];
 
   return (
-    <>
+  <main className="min-h-screen bg-gradient-to-b from-gray-100 via-white to-gray-100">
 
-      <main className="min-h-screen bg-dark-900 text-white">
-      {/* Hero Section */}
-      <section className="relative py-24 md:py-32">
-        <div className="container mx-auto px-4 text-center max-w-4xl">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-            About Landis Automation
-          </h1>
-          <p className="text-lg md:text-xl mb-8 text-text-secondary max-w-3xl mx-auto">
-            We are a specialized automation consultancy focused on transforming financial services operations through intelligent automation solutions.
-          </p>
-        </div>
-      </section>
-
-      {/* Mission Section */}
-      <section className="py-20 bg-dark-900">
-        <div className="container mx-auto px-4 max-w-4xl">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Our Mission</h2>
-            <p className="text-lg text-text-secondary leading-relaxed">
-              We unlock new levels of profitability and efficiency by designing and implementing intelligent automation solutions that streamline your operations and drive measurable growth.
+      {/* Unique Approach Section */}
+  <section className="py-20 bg-gradient-to-b from-white via-gray-100 to-gray-200 text-gray-900 transition-colors duration-700">
+        <div className="container mx-auto px-4 max-w-5xl">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-primary-700 drop-shadow">Our Unique Approach</h2>
+            <p className="text-lg text-gray-700 max-w-3xl mx-auto">
+              We provide <span className="font-semibold text-primary-400">complete, end-to-end automation solutions</span>—from initial analysis and solution design to final deployment and ongoing support. Enjoy the full benefits of increased efficiency and profitability, while we handle the technical complexities. Focus on your core business and strategic goals; we handle the rest.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Values Section */}
-      <section className="py-20 bg-dark-900">
+      {/* Expertise & Focus Section */}
+  <section className="py-20 bg-gradient-to-b from-gray-200 via-white to-gray-100 text-gray-900 transition-colors duration-700">
         <div className="container mx-auto px-4 max-w-6xl">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Core Values</h2>
-            <p className="text-lg text-text-secondary max-w-2xl mx-auto">
-              The principles that guide every decision we make.
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-primary-700 drop-shadow">Our Expertise & Focus</h2>
+            <p className="text-lg text-gray-700 max-w-3xl mx-auto">
+              We specialize in partnering with <span className="font-semibold text-primary-400">Investment Advisory Firms</span> and other financial institutions (10-500 employees). Our custom-built solutions address pain points unique to this sector:
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="bg-dark-800/80 rounded-2xl p-8 border-l-4 border-primary-400 shadow-lg flex items-center gap-4">
+              <FaCogs className="text-primary-400 text-4xl" />
+              <div>
+                <h3 className="font-bold text-lg mb-1 text-primary-100">Data Reconciliation & Routine Reporting</h3>
+                <p className="text-gray-100">Automate repetitive, error-prone data tasks and reporting cycles.</p>
+              </div>
+            </div>
+            <div className="bg-dark-800/80 rounded-2xl p-8 border-l-4 border-primary-400 shadow-lg flex items-center gap-4">
+              <FaUserFriends className="text-primary-400 text-4xl" />
+              <div>
+                <h3 className="font-bold text-lg mb-1 text-primary-100">Client Onboarding & Trade Support</h3>
+                <p className="text-gray-100">Streamline onboarding and post-trade processes for a seamless client experience.</p>
+              </div>
+            </div>
+            <div className="bg-dark-800/80 rounded-2xl p-8 border-l-4 border-primary-400 shadow-lg flex items-center gap-4">
+              <FaCogs className="text-primary-400 text-4xl" />
+              <div>
+                <h3 className="font-bold text-lg mb-1 text-primary-100">Intelligent Document Processing (IDP)</h3>
+                <p className="text-gray-100">Automate invoice and form processing with AI-powered document understanding.</p>
+              </div>
+            </div>
+            <div className="bg-dark-800/80 rounded-2xl p-8 border-l-4 border-primary-400 shadow-lg flex items-center gap-4">
+              <FaRocket className="text-primary-400 text-4xl" />
+              <div>
+                <h3 className="font-bold text-lg mb-1 text-primary-100">End-to-End Workflow Automation</h3>
+                <p className="text-gray-100">Connect disparate systems and automate complex, multi-step workflows.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Core Values Section */}
+  <section className="py-20 bg-gradient-to-b from-gray-100 via-white to-gray-100 text-gray-900 transition-colors duration-700">
+        <div className="container mx-auto px-4 max-w-6xl">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-primary-700 drop-shadow">Our Core Values</h2>
+            <p className="text-lg text-gray-700 max-w-2xl mx-auto">
+              Our work is guided by a set of core values that ensure every project is built with integrity and purpose:
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
-            {values.map((value, index) => (
+            {values.map(({ icon, title, desc }, index) => (
               <div
                 key={index}
-                className="bg-gradient-to-br from-content-box-900 to-primary-900/20 p-6 rounded-xl border border-primary-500/20 hover:border-primary-500/40 hover:bg-gradient-to-br hover:from-content-box-900 hover:to-primary-800/30 hover:-translate-y-2 hover:shadow-xl transition-all duration-300 flex items-center justify-center min-h-[120px] text-center cursor-pointer"
+                className="bg-gradient-to-br from-gray-900 to-gray-700 p-6 rounded-xl border border-primary-500/30 hover:border-primary-400 hover:bg-gradient-to-br hover:from-gray-900 hover:to-gray-800 hover:-translate-y-2 hover:shadow-xl transition-all duration-300 flex flex-col items-center justify-center min-h-[180px] text-center cursor-pointer"
               >
-                <h3 className="text-lg font-bold text-white">{value}</h3>
+                {icon}
+                <h3 className="text-lg font-bold text-blue-200 mb-2">{title}</h3>
+                  <p className="text-gray-100 text-sm">{desc}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Why Choose Us Section - Modern UI */}
-      <section className="py-20 w-full bg-gradient-to-br from-dark-900 via-dark-800 to-primary-900">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-extrabold mb-6 text-white drop-shadow-lg">Why Choose Landis Automation?</h2>
-            <p className="text-lg text-text-secondary max-w-3xl mx-auto">
-              We bring deep expertise in financial services automation, proven methodologies, and a track record of delivering measurable results.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-            <div className="bg-gradient-to-br from-primary-900/10 to-dark-800 border border-primary-700/30 rounded-2xl p-10 flex flex-col items-center text-center shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 cursor-pointer">
-              <div className="w-14 h-14 rounded-full bg-primary-500/10 flex items-center justify-center mb-4">
-                <span className="text-3xl">💡</span>
-              </div>
-              <h3 className="text-xl md:text-2xl font-bold mb-4 text-white">Financial Services Expertise</h3>
-              <p className="text-text-secondary">
-                Deep understanding of financial operations, compliance requirements, and industry-specific challenges.
-              </p>
-            </div>
-            <div className="bg-gradient-to-br from-primary-900/10 to-dark-800 border border-primary-700/30 rounded-2xl p-10 flex flex-col items-center text-center shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 cursor-pointer">
-              <div className="w-14 h-14 rounded-full bg-primary-500/10 flex items-center justify-center mb-4">
-                <span className="text-3xl">🛠️</span>
-              </div>
-              <h3 className="text-xl md:text-2xl font-bold mb-4 text-white">Technical Excellence</h3>
-              <p className="text-text-secondary">
-                Advanced skills in RPA platforms, AI/ML, cloud technologies, and enterprise integration.
-              </p>
-            </div>
-            <div className="bg-gradient-to-br from-primary-900/10 to-dark-800 border border-primary-700/30 rounded-2xl p-10 flex flex-col items-center text-center shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 cursor-pointer">
-              <div className="w-14 h-14 rounded-full bg-primary-500/10 flex items-center justify-center mb-4">
-                <span className="text-3xl">📜</span>
-              </div>
-              <h3 className="text-xl md:text-2xl font-bold mb-4 text-white">Regulatory Knowledge</h3>
-              <p className="text-text-secondary">
-                Comprehensive understanding of compliance requirements and regulatory frameworks.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+
+
+
 
       {/* CTA Section */}
-      <section className="py-20 bg-dark-900">
+  <section className="py-20 bg-gradient-to-b from-gray-100 via-white to-gray-100 text-gray-900">
         <div className="container mx-auto px-4 max-w-4xl text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-primary-700">
             Ready to Learn More?
           </h2>
-          <p className="text-lg mb-12 text-text-secondary max-w-3xl mx-auto">
+          <p className="text-lg mb-12 text-gray-700 max-w-3xl mx-auto">
             Let's discuss how we can solve your most pressing operational challenges and unlock new opportunities for growth. The first step is a complimentary consultation.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -139,7 +156,7 @@ export default function AboutPage() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-dark-900 border-t border-border/20">
+  <footer className="bg-gradient-to-b from-gray-100 via-white to-gray-100 text-gray-900 border-t border-border/20 transition-colors duration-700">
         <div className="container mx-auto px-4 py-16">
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             {/* Company Info */}
@@ -154,14 +171,14 @@ export default function AboutPage() {
                 </div>
                 <span className="font-bold text-xl">Landis Automation</span>
               </div>
-              <p className="text-text-secondary text-sm leading-relaxed">
+              <p className="text-gray-700 text-sm leading-relaxed">
                 Intelligent automation solutions for financial services. Transforming operations through cutting-edge technology.
               </p>
             </div>
             {/* Company Links */}
             <div>
               <h3 className="font-bold mb-4">Company</h3>
-              <ul className="space-y-2 text-text-secondary text-sm">
+              <ul className="space-y-2 text-gray-800 text-sm">
                 <li><Link href="/about" className="hover:text-primary-400 transition-colors">About Us</Link></li>
                 <li><Link href="/services" className="hover:text-primary-400 transition-colors">Services</Link></li>
                 <li><Link href="/process" className="hover:text-primary-400 transition-colors">Our Process</Link></li>
@@ -171,7 +188,7 @@ export default function AboutPage() {
             {/* Services Links */}
             <div>
               <h3 className="font-bold mb-4">Services</h3>
-              <ul className="space-y-2 text-text-secondary text-sm">
+              <ul className="space-y-2 text-gray-800 text-sm">
                 <li><Link href="/rpa" className="hover:text-primary-400 transition-colors">RPA Solutions</Link></li>
                 <li><Link href="/document-processing" className="hover:text-primary-400 transition-colors">Document Processing</Link></li>
                 <li><Link href="/data-reconciliation" className="hover:text-primary-400 transition-colors">Data Reconciliation</Link></li>
@@ -181,22 +198,22 @@ export default function AboutPage() {
             {/* Contact Info */}
             <div>
               <h3 className="font-bold mb-4">Contact</h3>
-              <ul className="space-y-2 text-text-secondary text-sm">
-                <li>info@landis-ventures.com</li>
-                <li>(202) 854-0738</li>
+              <ul className="space-y-2 text-gray-800 text-sm">
+                <li className="text-gray-900">info@landis-ventures.com</li>
+                <li className="text-gray-900">(202) 854-0738</li>
               </ul>
             </div>
           </div>
           {/* Bottom Footer */}
           <div className="border-t border-border/20 pt-8 flex flex-col md:flex-row justify-between items-center">
-            <p className="text-text-muted text-sm">
+            <p className="text-gray-500 text-sm">
               © 2025 Landis Automation. All rights reserved.
             </p>
             <div className="flex gap-6 mt-4 md:mt-0">
-              <Link href="/privacy" className="text-text-muted text-sm hover:text-primary-400 transition-colors">
+              <Link href="/privacy" className="text-gray-500 text-sm hover:text-primary-400 transition-colors">
                 Privacy Policy
               </Link>
-              <Link href="/terms" className="text-text-muted text-sm hover:text-primary-400 transition-colors">
+              <Link href="/terms" className="text-gray-500 text-sm hover:text-primary-400 transition-colors">
                 Terms of Service
               </Link>
             </div>
@@ -209,6 +226,5 @@ export default function AboutPage() {
         <N8nChat />
       </div>
     </main>
-    </>
   );
 }
