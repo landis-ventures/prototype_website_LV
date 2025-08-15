@@ -1,11 +1,15 @@
 "use client";
 
+
 import Link from 'next/link';
 import Image from 'next/image';
 import { useState } from 'react';
+import { usePathname } from 'next/navigation';
+
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   return (
     <header className="sticky top-0 z-40 bg-dark-900/80 backdrop-blur-sm border-b-2 border-border/60">
@@ -34,7 +38,7 @@ export default function Header() {
 
             {/* Company Name */}
             <div className="font-black text-xl text-white">
-                Landis Ventures
+                Landis Automation
             </div>
             </Link>
 
@@ -42,20 +46,26 @@ export default function Header() {
           <div className="hidden md:flex items-center space-x-8 flex-shrink-0">
             {/* Navigation Links */}
             <Link 
+              href="/" 
+              className={`text-white hover:text-primary-400 font-medium transition-colors duration-300 px-3 py-1 rounded-md ${pathname === '/' ? 'bg-primary-600/90 text-white shadow' : ''}`}
+            >
+              Home
+            </Link>
+            <Link 
               href="/services" 
-              className="text-white hover:text-primary-400 font-medium transition-colors duration-300"
+              className={`text-white hover:text-primary-400 font-medium transition-colors duration-300 px-3 py-1 rounded-md ${pathname.startsWith('/services') ? 'bg-primary-600/90 text-white shadow' : ''}`}
             >
               Services
             </Link>
             <Link 
               href="/process" 
-              className="text-white hover:text-primary-400 font-medium transition-colors duration-300"
+              className={`text-white hover:text-primary-400 font-medium transition-colors duration-300 px-3 py-1 rounded-md ${pathname.startsWith('/process') ? 'bg-primary-600/90 text-white shadow' : ''}`}
             >
               Our Process
             </Link>
             <Link 
               href="/about" 
-              className="text-white hover:text-primary-400 font-medium transition-colors duration-300"
+              className={`text-white hover:text-primary-400 font-medium transition-colors duration-300 px-3 py-1 rounded-md ${pathname.startsWith('/about') ? 'bg-primary-600/90 text-white shadow' : ''}`}
             >
               About
             </Link>
@@ -87,22 +97,29 @@ export default function Header() {
         <div className={`md:hidden transition-all duration-300 ease-in-out ${isMenuOpen ? 'max-h-64 opacity-100' : 'max-h-0 opacity-0 overflow-hidden'}`}>
           <nav className="py-4 space-y-4 border-t border-border/20">
             <Link 
+              href="/" 
+              className={`block text-white hover:text-primary-400 font-medium transition-colors duration-300 py-2 px-3 rounded-md ${pathname === '/' ? 'bg-primary-600/90 text-white shadow' : ''}`}
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Home
+            </Link>
+            <Link 
               href="/services" 
-              className="block text-white hover:text-primary-400 font-medium transition-colors duration-300 py-2"
+              className={`block text-white hover:text-primary-400 font-medium transition-colors duration-300 py-2 px-3 rounded-md ${pathname.startsWith('/services') ? 'bg-primary-600/90 text-white shadow' : ''}`}
               onClick={() => setIsMenuOpen(false)}
             >
               Services
             </Link>
             <Link 
               href="/process" 
-              className="block text-white hover:text-primary-400 font-medium transition-colors duration-300 py-2"
+              className={`block text-white hover:text-primary-400 font-medium transition-colors duration-300 py-2 px-3 rounded-md ${pathname.startsWith('/process') ? 'bg-primary-600/90 text-white shadow' : ''}`}
               onClick={() => setIsMenuOpen(false)}
             >
               Our Process
             </Link>
             <Link 
               href="/about" 
-              className="block text-white hover:text-primary-400 font-medium transition-colors duration-300 py-2"
+              className={`block text-white hover:text-primary-400 font-medium transition-colors duration-300 py-2 px-3 rounded-md ${pathname.startsWith('/about') ? 'bg-primary-600/90 text-white shadow' : ''}`}
               onClick={() => setIsMenuOpen(false)}
             >
               About

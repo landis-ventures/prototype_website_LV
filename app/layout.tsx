@@ -10,7 +10,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Landis Ventures - Intelligent Automation for Financial Services",
+  title: "Landis Automation - Intelligent Automation for Financial Services",
   description: "We unlock new levels of profitability and efficiency by designing and implementing intelligent automation solutions that streamline your operations and drive measurable growth.",
   keywords: "automation, RPA, financial services, process automation, workflow automation, document processing",
 };

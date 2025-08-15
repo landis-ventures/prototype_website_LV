@@ -13,11 +13,11 @@ export default function N8nChat() {
       // --- Optional Customizations ---
       initialMessages: [
         'Hello!',
-        'I am the AI assistant for Landis Ventures. How can I help you today?'
+  'I am the AI assistant for Landis Automation. How can I help you today?'
       ],
       i18n: {
         en: {
-          title: 'Landis Ventures AI',
+          title: 'Landis Automation AI',
           subtitle: 'AI Assistant',
           footer: 'Powered by n8n',
           getStarted: 'Get Started',

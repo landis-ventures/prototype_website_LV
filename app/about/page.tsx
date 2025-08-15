@@ -18,7 +18,7 @@ export default function AboutPage() {
       <section className="relative py-24 md:py-32">
         <div className="container mx-auto px-4 text-center max-w-4xl">
           <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-            About Landis Ventures
+            About Landis Automation
           </h1>
           <p className="text-lg md:text-xl mb-8 text-text-secondary max-w-3xl mx-auto">
             We are a specialized automation consultancy focused on transforming financial services operations through intelligent automation solutions.
@@ -64,7 +64,7 @@ export default function AboutPage() {
       <section className="py-20 w-full bg-gradient-to-br from-dark-900 via-dark-800 to-primary-900">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-extrabold mb-6 text-white drop-shadow-lg">Why Choose Landis Ventures?</h2>
+            <h2 className="text-4xl md:text-5xl font-extrabold mb-6 text-white drop-shadow-lg">Why Choose Landis Automation?</h2>
             <p className="text-lg text-text-secondary max-w-3xl mx-auto">
               We bring deep expertise in financial services automation, proven methodologies, and a track record of delivering measurable results.
             </p>
@@ -152,7 +152,7 @@ export default function AboutPage() {
                     <path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"></path>
                   </svg>
                 </div>
-                <span className="font-bold text-xl">Landis Ventures</span>
+                <span className="font-bold text-xl">Landis Automation</span>
               </div>
               <p className="text-text-secondary text-sm leading-relaxed">
                 Intelligent automation solutions for financial services. Transforming operations through cutting-edge technology.
@@ -190,7 +190,7 @@ export default function AboutPage() {
           {/* Bottom Footer */}
           <div className="border-t border-border/20 pt-8 flex flex-col md:flex-row justify-between items-center">
             <p className="text-text-muted text-sm">
-              © 2025 Landis Ventures. All rights reserved.
+              © 2025 Landis Automation. All rights reserved.
             </p>
             <div className="flex gap-6 mt-4 md:mt-0">
               <Link href="/privacy" className="text-text-muted text-sm hover:text-primary-400 transition-colors">

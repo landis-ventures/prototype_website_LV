@@ -1,3 +1,21 @@
+      {/* Satisfaction Guarantee Section - Modern UI */}
+      <section className="py-20 flex justify-center items-center" style={{ background: '#000' }}>
+        <div className="bg-[#212B3A] rounded-[2.5rem] shadow-2xl px-6 md:px-16 py-16 max-w-4xl w-full text-center border border-blue-900/30">
+          <div className="flex justify-center mb-8">
+            <span className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-blue-900/20">
+              <svg xmlns="http://www.w3.org/2000/svg" className="w-10 h-10 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                <path d="M12 2l7 4v6c0 5.25-3.5 10-7 10s-7-4.75-7-10V6l7-4z" />
+                <path d="M9 12l2 2 4-4" />
+              </svg>
+            </span>
+          </div>
+          <h2 className="text-4xl md:text-5xl font-extrabold mb-6 text-white tracking-tight">Your Satisfaction, Guaranteed.</h2>
+          <p className="text-xl md:text-2xl text-text-secondary max-w-2xl mx-auto mb-2 font-medium">
+            We are so confident in our ability to deliver transformative results that we offer a <span className="font-bold text-white">100% money-back guarantee</span>. If you are not completely satisfied with the outcome of our work, you won't pay a dime. It's our commitment to a true, value-driven partnership.
+          </p>
+        </div>
+      </section>
+
 import N8nChat from '../components/N8nChat';
 import Link from 'next/link';
 
@@ -70,17 +88,37 @@ export default function HomePage() {
             <div className="hidden md:block absolute top-[110px] left-0 right-0 h-1 bg-gradient-to-r from-primary-500 via-primary-400 to-primary-700 animate-pulse z-0"></div>
             {/* Steps */}
             <div className="w-full flex flex-col md:flex-row items-stretch justify-between gap-10 md:gap-0">
-              {processSteps.map((step, idx) => (
+              {[{
+                number: "1",
+                title: "Discovery & Analysis",
+                description: "Understanding your goals and assessing ROI."
+              }, {
+                number: "2",
+                title: "Solution Design",
+                description: "Creating the blueprint for your automation."
+              }, {
+                number: "3",
+                title: "Development & Testing",
+                description: "Building the bot and conducting rigorous UAT."
+              }, {
+                number: "4",
+                title: "Deployment & Launch",
+                description: "Moving the solution to production with training."
+              }, {
+                number: "5",
+                title: "Support & Maintenance",
+                description: "Ensuring long-term success and reliability."
+              }].map((step, idx) => (
                 <div key={step.number} className="relative z-10 flex-1 flex flex-col items-center text-center group min-h-[260px]">
-                  <div className="w-20 h-20 md:w-24 md:h-24 bg-white/10 backdrop-blur-xl rounded-full flex items-center justify-center text-primary-100 font-extrabold text-2xl md:text-3xl mb-2 shadow-2xl border-4 border-primary-400 group-hover:scale-110 group-hover:border-primary-300 transition-all duration-300" style={{marginBottom: '0.5rem'}}>
-                    <span className="bg-gradient-to-br from-primary-400 via-primary-600 to-primary-900 bg-clip-text text-transparent drop-shadow-lg animate-pulse">{step.number}</span>
+                  <div className="w-20 h-20 md:w-24 md:h-24 bg-white/10 backdrop-blur-xl rounded-full flex items-center justify-center font-extrabold text-2xl md:text-3xl mb-2 shadow-2xl border-4 border-primary-400 group-hover:scale-110 group-hover:border-primary-300 transition-all duration-300" style={{marginBottom: '0.5rem'}}>
+                    <span className="text-white font-black drop-shadow-[0_0_16px_rgba(255,255,255,0.85)] animate-pulse">{step.number}</span>
                   </div>
                   <div className="flex flex-col items-center justify-center flex-1" style={{marginTop: '0.5rem'}}>
                     <h3 className="text-xl md:text-2xl font-bold mb-1 text-white drop-shadow-lg group-hover:text-primary-300 transition-colors duration-300">{step.title}</h3>
                     <p className="text-text-secondary text-base md:text-lg max-w-xs mx-auto group-hover:text-white/80 transition-colors duration-300">{step.description}</p>
                   </div>
                   {/* Decorative Glow */}
-                  <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 w-24 h-6 bg-primary-500/30 blur-md opacity-60"></div>
+                  <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 w-24 h-6 bg-primary-500/30 blur-md opacity-50"></div>
                 </div>
               ))}
             </div>
@@ -90,32 +128,34 @@ export default function HomePage() {
 
   return (
     <main className="min-h-screen bg-dark-900 text-white">
-  {/* Main Call to Action Section */}
-  <section className="relative py-24 md:py-32 overflow-hidden" style={{background: 'radial-gradient(ellipse at center, #232a3a 0%, #111217 100%)'}}>
-    <div className="container mx-auto px-4 text-center max-w-4xl relative z-10">
-      <h1 className="text-4xl md:text-6xl font-black mb-6 leading-tight text-white drop-shadow-[0_2px_16px_rgba(0,123,255,0.25)]">
-        WASTING YOUR <span className="text-primary-400">TIME?</span>
-      </h1>
-      <p className="text-lg md:text-xl mb-8 text-text-secondary max-w-3xl mx-auto">
-        Optimize your business through intelligent automation to save time, increase <span className="text-primary-400 font-bold">profits</span>, and achieve your goals.
-      </p>
-      <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-        <Link 
-          href="/contact" 
-          className="inline-block bg-gradient-to-r from-primary-700 to-primary-500 text-white font-bold text-lg py-4 px-8 rounded-full shadow-lg hover:shadow-2xl hover:-translate-y-1 hover:scale-110 hover:bg-gradient-to-r hover:from-primary-600 hover:to-primary-400 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-primary-400/40"
-        >
-          Start Streamlining Processes Today
-        </Link>
-      </div>
-      {/* Optional: Decorative Glow/Shape */}
-      <div className="absolute inset-0 pointer-events-none z-0">
-        <div className="w-full h-full bg-gradient-radial from-primary-900/10 to-transparent opacity-60"></div>
-      </div>
-    </div>
-  </section>
+      {/* Main Call to Action Section */}
+      <section className="relative py-36 md:py-56 overflow-hidden" style={{background: 'radial-gradient(ellipse at center, #232a3a 0%, #111217 100%)'}}>
+        <div className="container mx-auto px-4 text-center max-w-6xl relative z-10">
+          <h1 className="text-5xl md:text-7xl font-black mb-10 leading-tight text-white drop-shadow-[0_2px_24px_rgba(0,123,255,0.30)]">
+            WASTING YOUR <span className="text-primary-400">TIME?</span>
+          </h1>
+          <p className="text-xl md:text-2xl mb-12 text-text-secondary max-w-4xl mx-auto">
+            Optimize your business through intelligent automation to save time, increase <span className="text-primary-400 font-bold">profits</span>, and achieve your goals.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+            <Link 
+              href="/contact" 
+              className="inline-block bg-gradient-to-r from-primary-700 to-primary-500 text-white font-bold text-xl py-5 px-12 rounded-full shadow-2xl hover:shadow-2xl hover:-translate-y-1 hover:scale-110 hover:bg-gradient-to-r hover:from-primary-600 hover:to-primary-400 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-primary-400/40"
+            >
+              Start Streamlining Processes Today
+            </Link>
+          </div>
+          {/* Optional: Decorative Glow/Shape */}
+          <div className="absolute inset-0 pointer-events-none z-0">
+            <div className="w-full h-full bg-gradient-radial from-primary-900/10 to-transparent opacity-60"></div>
+          </div>
+        </div>
+      </section>
 
-  <section className="py-20                                                    w-full">
-    <div className="w-full">
+
+
+  <section className="py-20" style={{ background: '#000' }}>
+  <div className="w-full" style={{ background: '#000', margin: 0, padding: 0 }}>
   <div className="bg-gradient-to-br from-dark-800 via-dark-900 to-primary-900 border border-primary-700/30 rounded-3xl p-6 md:p-10 text-center shadow-2xl mx-0 w-full flex flex-col items-center justify-center">
         <div className="w-20 h-20 bg-primary-500/10 border border-primary-500/30 rounded-full flex items-center justify-center text-primary-400 mb-8">
           {/* Shield Icon for trust */}
@@ -132,7 +172,7 @@ export default function HomePage() {
   </section>
 
       {/* Services Section */}
-      <section id="services" className="py-20 bg-dark-900">
+      <section id="services" className="py-20 bg-dark-900"  style={{ background: '#000' }}>
         <div className="container mx-auto px-4 max-w-6xl">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Services</h2>
@@ -156,27 +196,28 @@ export default function HomePage() {
       </section>
 
       {/* Process Section */}
-      <section className="py-20 bg-dark-900">
-        <div className="container mx-auto px-4 max-w-6xl">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Structured 5-Phase Process</h2>
-            <p className="text-lg text-text-secondary max-w-2xl mx-auto">
-              We ensure high-quality, sustainable results through a proven methodology.
-            </p>
+      <section className="py-24 w-full bg-gradient-to-br from-dark-900 via-dark-950 to-primary-900 relative overflow-x-hidden">
+        <div className="max-w-7xl mx-auto px-4 relative z-10">
+          <div className="text-center mb-20">
+            <h2 className="text-4xl md:text-5xl font-extrabold mb-6 text-white drop-shadow-lg tracking-tight">Our Structured 5-Phase Process</h2>
+            <p className="text-lg text-text-secondary max-w-2xl mx-auto">We ensure high-quality, sustainable results through a proven methodology.</p>
           </div>
-          
-          <div className="relative">
-            {/* Process Line */}
-            <div className="absolute top-8 left-0 right-0 h-0.5 bg-border hidden md:block"></div>
-            
-            <div className="grid md:grid-cols-5 gap-8">
-              {processSteps.map((step, index) => (
-                <div key={index} className="text-center relative">
-                  <div className="w-16 h-16 bg-primary-500 rounded-full flex items-center justify-center text-white font-bold text-xl mx-auto mb-4 process-step">
-                    {step.number}
+          <div className="relative flex flex-col md:flex-row items-end justify-between gap-10 md:gap-0">
+            {/* Animated Timeline Line */}
+            <div className="hidden md:block absolute top-[110px] left-0 right-0 h-1 bg-gradient-to-r from-primary-500 via-primary-400 to-primary-700 animate-pulse z-0"></div>
+            {/* Steps */}
+            <div className="w-full flex flex-col md:flex-row items-stretch justify-between gap-10 md:gap-0">
+              {processSteps.map((step, idx) => (
+                <div key={step.number} className="relative z-10 flex-1 flex flex-col items-center text-center group min-h-[260px]">
+                  <div className="w-20 h-20 md:w-24 md:h-24 bg-white/10 backdrop-blur-xl rounded-full flex items-center justify-center text-primary-100 font-extrabold text-2xl md:text-3xl mb-2 shadow-2xl border-4 border-primary-400 group-hover:scale-110 group-hover:border-primary-300 transition-all duration-300" style={{marginBottom: '0.5rem'}}>
+                    <span className="bg-gradient-to-br from-primary-400 via-primary-600 to-primary-900 bg-clip-text text-transparent drop-shadow-lg animate-pulse">{step.number}</span>
                   </div>
-                  <h3 className="text-lg font-bold mb-2">{step.title}</h3>
-                  <p className="text-text-secondary text-sm">{step.description}</p>
+                  <div className="flex flex-col items-center justify-center flex-1" style={{marginTop: '0.5rem'}}>
+                    <h3 className="text-xl md:text-2xl font-bold mb-1 text-white drop-shadow-lg group-hover:text-primary-300 transition-colors duration-300">{step.title}</h3>
+                    <p className="text-text-secondary text-base md:text-lg max-w-xs mx-auto group-hover:text-white/80 transition-colors duration-300">{step.description}</p>
+                  </div>
+                  {/* Decorative Glow */}
+                  <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 w-24 h-6 bg-primary-500/30 blur-md opacity-60"></div>
                 </div>
               ))}
             </div>
@@ -335,7 +376,7 @@ export default function HomePage() {
                 <path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"></path>
                 </svg>
                 </div>
-                <span className="font-bold text-xl">Landis Ventures</span>
+                <span className="font-bold text-xl">Landis Automation</span>
               </div>
               <p className="text-text-secondary text-sm leading-relaxed">
                 Intelligent automation solutions for financial services. Transforming operations through cutting-edge technology.
@@ -377,7 +418,7 @@ export default function HomePage() {
           {/* Bottom Footer */}
           <div className="border-t border-border/20 pt-8 flex flex-col md:flex-row justify-between items-center">
             <p className="text-text-muted text-sm">
-              © 2025 Landis Ventures. All rights reserved.
+              © 2025 Landis Automation. All rights reserved.
             </p>
             <div className="flex gap-6 mt-4 md:mt-0">
               <Link href="/privacy" className="text-text-muted text-sm hover:text-primary-400 transition-colors">

@@ -16,18 +16,35 @@ export default function ContactPage() {
                 method="POST"
                 className="space-y-6"
               >
+
+                {/* Row 1: First Name, Last Name */}
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
-                    <label htmlFor="name" className="block text-sm font-medium mb-2">Full Name *</label>
+                    <label htmlFor="firstName" className="block text-sm font-medium mb-2">First Name *</label>
                     <input
-                      id="name"
+                      id="firstName"
                       type="text"
-                      name="name"
+                      name="firstName"
                       className="w-full px-4 py-3 bg-dark-800 border border-border rounded-lg text-white placeholder-text-muted focus:border-primary-500 focus:outline-none transition-colors"
-                      placeholder="Enter your full name"
+                      placeholder="Enter your first name"
                       required
                     />
                   </div>
+                  <div>
+                    <label htmlFor="lastName" className="block text-sm font-medium mb-2">Last Name *</label>
+                    <input
+                      id="lastName"
+                      type="text"
+                      name="lastName"
+                      className="w-full px-4 py-3 bg-dark-800 border border-border rounded-lg text-white placeholder-text-muted focus:border-primary-500 focus:outline-none transition-colors"
+                      placeholder="Enter your last name"
+                      required
+                    />
+                  </div>
+                </div>
+
+                {/* Row 2: Email, Phone Number */}
+                <div className="grid md:grid-cols-2 gap-4">
                   <div>
                     <label htmlFor="email" className="block text-sm font-medium mb-2">Email *</label>
                     <input
@@ -39,19 +56,19 @@ export default function ContactPage() {
                       required
                     />
                   </div>
+                  <div>
+                    <label htmlFor="phone" className="block text-sm font-medium mb-2">Phone Number (Optional)</label>
+                    <input
+                      id="phone"
+                      type="tel"
+                      name="phone"
+                      className="w-full px-4 py-3 bg-dark-800 border border-border rounded-lg text-white placeholder-text-muted focus:border-primary-500 focus:outline-none transition-colors"
+                      placeholder="(555) 123-4567"
+                    />
+                  </div>
                 </div>
 
-                <div>
-                  <label htmlFor="phone" className="block text-sm font-medium mb-2">Phone Number (Optional)</label>
-                  <input
-                    id="phone"
-                    type="tel"
-                    name="phone"
-                    className="w-full px-4 py-3 bg-dark-800 border border-border rounded-lg text-white placeholder-text-muted focus:border-primary-500 focus:outline-none transition-colors"
-                    placeholder="(555) 123-4567"
-                  />
-                </div>
-
+                {/* Row 3: Project Details */}
                 <div>
                   <label htmlFor="message" className="block text-sm font-medium mb-2">Project Details *</label>
                   <textarea

@@ -44,7 +44,7 @@ export default function ProcessPage() {
       </section>
 
       {/* Process Timeline Section */}
-      <section className="py-20">
+      <section className="py-5">
         <div className="container mx-auto px-4 max-w-4xl">
           <div className="relative">
             {/* The vertical timeline bar */}
